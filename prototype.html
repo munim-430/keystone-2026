@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keystone Global &bull; Malaysia Labor Corridor Dual-System Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-display { font-family: 'Figtree', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .font-bangla { font-family: 'Noto Sans Bengali', sans-serif; }
+    .btn-spring { transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1); }
+    .btn-spring:hover { transform: translateY(-2px); }
+    .btn-spring:active { transform: translateY(0) scale(0.98); }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(12,64,121,0.3); border-radius: 4px; }
+    .phone-notch { border-bottom-left-radius: 18px; border-bottom-right-radius: 18px; }
+  </style>
+</head>
+<body class="h-full flex flex-col bg-slate-950 text-slate-100 selection:bg-[#EA333F] selection:text-white overflow-hidden">
+
+  <!-- TOP GLOBAL APP BAR & VIEWPORT CONTROLLER -->
+  <header class="h-16 border-b border-slate-800 bg-slate-900/90 backdrop-blur-xl flex items-center justify-between px-6 z-50 flex-shrink-0">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#0C4079] to-[#EA333F] flex items-center justify-center shadow-lg font-display font-black text-white text-base">
+        K
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="font-display font-extrabold text-sm tracking-tight text-white">KEYSTONE <span class="text-[#EA333F]">GLOBAL</span></span>
+          <span class="bg-[#0C4079]/50 text-sky-300 text-[10px] font-mono px-2 py-0.5 rounded-full border border-sky-400/30">MALAYSIA CORRIDOR PROTOTYPE</span>
+        </div>
+        <p class="text-[11px] text-slate-400">Tripartite Clean Corridor Operating System (TCCA)</p>
+      </div>
+    </div>
+
+    <!-- VIEWPORT TOGGLE BUTTONS -->
+    <div class="flex items-center gap-1.5 bg-slate-950 p-1 rounded-xl border border-slate-800 text-xs font-semibold">
+      <button onclick="setView('split')" id="btn-split" class="view-btn px-4 py-1.5 rounded-lg text-slate-400 hover:text-white flex items-center gap-1.5">
+        <span>◫</span> Split View
+      </button>
+      <button onclick="setView('desktop')" id="btn-desktop" class="view-btn px-4 py-1.5 rounded-lg bg-[#0C4079] text-white font-bold flex items-center gap-1.5">
+        <span>🏢</span> Malaysian Employer Portal (SaaS)
+      </button>
+      <button onclick="setView('mobile')" id="btn-mobile" class="view-btn px-4 py-1.5 rounded-lg text-slate-400 hover:text-white flex items-center gap-1.5">
+        <span>📱</span> Worker Mobile PWA (প্রবাসী কর্মসেতু)
+      </button>
+    </div>
+
+    <!-- LIVE CORRIDOR STATS -->
+    <div class="hidden lg:flex items-center gap-4 text-xs font-mono">
+      <div class="flex items-center gap-1.5 bg-emerald-950/60 text-emerald-400 border border-emerald-800/40 px-3 py-1 rounded-lg">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>KESUMA 200k Quota Reopening</span>
+      </div>
+      <div class="text-slate-400">
+        JTKSM Act 1955: <span class="text-white font-bold">100% Compliant</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WORKSPACE VIEWPORTS -->
+  <main class="flex-1 flex overflow-hidden relative">
+
+    <!-- ========================================================================= -->
+    <!-- VIEWPORT 1: MALAYSIAN ENTERPRISE EMPLOYER PORTAL (DESKTOP SAAS)           -->
+    <!-- ========================================================================= -->
+    <div id="view-desktop-container" class="flex-1 flex flex-col bg-slate-900 overflow-y-auto custom-scrollbar border-r border-slate-800">
+      
+      <!-- SaaS Subheader -->
+      <div class="bg-slate-950/70 border-b border-slate-800 px-8 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-sky-900/60 border border-sky-600/40 flex items-center justify-center text-xs font-mono font-bold text-sky-300">
+            IN
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="font-display font-bold text-sm text-white">Inari Technology Sdn Bhd</h2>
+              <span class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded border border-emerald-800/40 font-mono">Category B/C APS Verified</span>
+            </div>
+            <p class="text-xs text-slate-400">Bayan Lepas Free Industrial Zone, Penang &bull; SSM: 199501002341</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-3">
+          <button class="btn-spring px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 flex items-center gap-1.5">
+            <span>📄</span> JTKSM Section 60K Audit Vault
+          </button>
+          <button class="btn-spring px-3.5 py-1.5 rounded-lg bg-[#EA333F] hover:bg-[#C71D29] text-white text-xs font-bold shadow-md flex items-center gap-1.5">
+            <span>+</span> New eQuota Intake
+          </button>
+        </div>
+      </div>
+
+      <!-- SaaS Main Dashboard Content -->
+      <div class="p-8 space-y-8 max-w-6xl mx-auto w-full">
+        
+        <!-- KPI Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+          <div class="bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+            <p class="text-xs text-slate-400 font-mono">Active Approved Quota</p>
+            <p class="font-display font-extrabold text-2xl text-white mt-1">250 <span class="text-xs font-normal text-slate-400">Workers</span></p>
+            <p class="text-[11px] text-emerald-400 mt-1 flex items-center gap-1"><span>✓</span> KESUMA eQuota Ref #8819</p>
+          </div>
+          <div class="bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+            <p class="text-xs text-slate-400 font-mono">Deployment SLA Speed</p>
+            <p class="font-display font-extrabold text-2xl text-white mt-1">32 <span class="text-xs font-normal text-slate-400">Days</span></p>
+            <p class="text-[11px] text-sky-400 mt-1">vs 180 days via syndicates</p>
+          </div>
+          <div class="bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+            <p class="text-xs text-slate-400 font-mono">US-CBP Forced Labor Risk</p>
+            <p class="font-display font-extrabold text-2xl text-emerald-400 mt-1">0.0% <span class="text-xs font-normal text-slate-400">(Zero)</span></p>
+            <p class="text-[11px] text-emerald-400 mt-1">100% Employer-Pay Verified</p>
+          </div>
+          <div class="bg-slate-950/60 p-4 rounded-2xl border border-slate-800">
+            <p class="text-xs text-slate-400 font-mono">NID Verified Candidates</p>
+            <p class="font-display font-extrabold text-2xl text-white mt-1">540 <span class="text-xs font-normal text-slate-400">Ready</span></p>
+            <p class="text-[11px] text-slate-400 mt-1">BMET &amp; Porichoy Screened</p>
+          </div>
+        </div>
+
+        <!-- Section 60K Job Order Ingestion & Live Cost Simulator -->
+        <div class="bg-slate-950/80 rounded-2xl border border-slate-800 p-6 shadow-xl">
+          <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
+            <div>
+              <h3 class="font-display font-extrabold text-lg text-white">KESUMA eQuota Job Order Ingestion</h3>
+              <p class="text-xs text-slate-400">Compliant with Section 60K Malaysian Employment Act 1955 &amp; RBA 7.0 Standard</p>
+            </div>
+            <span class="bg-sky-950 text-sky-300 text-xs font-mono px-3 py-1 rounded-full border border-sky-800/40">Step 1 of 3: Order Parameters</span>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Form Inputs -->
+            <div class="space-y-4 text-xs">
+              <div>
+                <label class="block text-slate-300 font-semibold mb-1">KESUMA Approval Reference Slip:</label>
+                <div class="flex items-center gap-2">
+                  <input type="text" value="KSM/100/2026/008819" class="bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2 text-white font-mono flex-1 focus:border-[#EA333F] focus:outline-none">
+                  <span class="bg-emerald-950 text-emerald-400 border border-emerald-800 px-3 py-2 rounded-xl font-bold">✓ PDF Verified</span>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-slate-300 font-semibold mb-1">Industry Sector:</label>
+                  <select id="sectorSelect" onchange="calculateEmployerMath()" class="bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2 text-white w-full focus:border-[#EA333F] focus:outline-none">
+                    <option value="ee">Electronics &amp; Semiconductor (E&amp;E)</option>
+                    <option value="mfg">Heavy Manufacturing &amp; Plastics</option>
+                    <option value="pltn">Plantation &amp; Agriculture</option>
+                    <option value="const">Construction &amp; Infrastructure</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-slate-300 font-semibold mb-1">Job Designation:</label>
+                  <input type="text" value="SMT Machine Operator (Cleanroom)" class="bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2 text-white w-full focus:border-[#EA333F] focus:outline-none">
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between items-center mb-1">
+                  <label class="text-slate-300 font-semibold">Worker Quota Count:</label>
+                  <span id="workerCountDisplay" class="font-mono text-sky-400 font-bold text-sm">250 Workers</span>
+                </div>
+                <input type="range" id="workerSlider" min="20" max="1000" step="10" value="250" oninput="updateWorkerCount(this.value)" class="w-full accent-[#EA333F] bg-slate-800 rounded-lg cursor-pointer">
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-slate-300 font-semibold mb-1">Basic Wage (MYR/Mo):</label>
+                  <input type="number" id="wageInput" value="1800" oninput="calculateEmployerMath()" class="bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2 text-white font-mono w-full focus:border-[#EA333F] focus:outline-none">
+                </div>
+                <div>
+                  <label class="block text-slate-300 font-semibold mb-1">Act 446 Centralized Housing:</label>
+                  <div class="bg-slate-900 border border-emerald-700/50 rounded-xl px-3.5 py-2 text-emerald-400 font-bold flex items-center gap-1">
+                    <span>✓ Free Hostels (JTK Certified)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Compliance Warranties -->
+              <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800 space-y-2 text-[11px] text-slate-300">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" checked class="rounded bg-slate-800 border-slate-700 text-[#EA333F] focus:ring-0">
+                  <span>Employer undertakes full liability for Malaysian Government Levy &amp; Airfare.</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" checked class="rounded bg-slate-800 border-slate-700 text-[#EA333F] focus:ring-0">
+                  <span>Zero recruitment fee is charged to the candidate (100% US-CBP audit proof).</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Real-Time Cost Simulator & Output Box -->
+            <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
+              <div>
+                <p class="font-mono text-xs text-[#EA333F] uppercase tracking-widest mb-2">Live Financial Simulation</p>
+                <h4 class="font-display font-extrabold text-xl text-white mb-4">Employer-Pay Cost Matrix</h4>
+                
+                <div class="space-y-2.5 text-xs font-mono">
+                  <div class="flex justify-between text-slate-400 pb-1.5 border-b border-slate-800">
+                    <span>Govt Levy (RM 1,850/worker):</span>
+                    <span id="levyTotal" class="text-white">RM 462,500</span>
+                  </div>
+                  <div class="flex justify-between text-slate-400 pb-1.5 border-b border-slate-800">
+                    <span>Calling Visa &amp; PLKS (RM 250/wkr):</span>
+                    <span id="visaTotal" class="text-white">RM 62,500</span>
+                  </div>
+                  <div class="flex justify-between text-slate-400 pb-1.5 border-b border-slate-800">
+                    <span>FOMEMA &amp; Health Insurance:</span>
+                    <span id="fomemaTotal" class="text-white">RM 112,500</span>
+                  </div>
+                  <div class="flex justify-between text-slate-400 pb-1.5 border-b border-slate-800">
+                    <span>Charter Flight (DAC &rarr; KUL):</span>
+                    <span id="flightTotal" class="text-white">RM 325,000</span>
+                  </div>
+                  <div class="flex justify-between text-slate-400 pb-1.5 border-b border-slate-800">
+                    <span>Keystone Sourcing Retainer:</span>
+                    <span id="sourcingTotal" class="text-emerald-400 font-bold">RM 375,000</span>
+                  </div>
+                  <div class="flex justify-between text-sm font-bold text-white pt-2 border-t-2 border-slate-700">
+                    <span>Total Employer Budget:</span>
+                    <span id="grandTotal" class="text-sky-400 text-base">RM 1,337,500</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400 font-sans mt-1">Average: RM 5,350 (~$1,200 USD) per worker. 0% debt bondage.</p>
+                </div>
+              </div>
+
+              <div class="mt-6 flex gap-3">
+                <button onclick="alert('JTKSM Section 60K Certificate Generated and ready for KESUMA upload!')" class="btn-spring flex-1 py-2.5 rounded-xl bg-gradient-to-r from-[#0C4079] to-[#1A5AA3] hover:from-[#EA333F] hover:to-[#C71D29] text-white text-xs font-bold shadow-lg text-center">
+                  Submit to BMET Clearinghouse &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Candidate Match Matrix -->
+        <div class="bg-slate-950/80 rounded-2xl border border-slate-800 p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="font-display font-extrabold text-base text-white">Pre-Screened Candidate Stream (Ready for Calling Visa)</h3>
+              <p class="text-xs text-slate-400">Porichoy NID Verified &bull; BMET Registered &bull; DGHS Medical Cleared</p>
+            </div>
+            <span class="text-xs text-sky-400 font-mono">Live Queue: 540 Verified</span>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs font-mono">
+              <thead class="bg-slate-900 text-slate-400 border-b border-slate-800">
+                <tr>
+                  <th class="p-3">Candidate ID</th>
+                  <th class="p-3">Name</th>
+                  <th class="p-3">District</th>
+                  <th class="p-3">Trade Skill</th>
+                  <th class="p-3">Porichoy NID</th>
+                  <th class="p-3">Medical</th>
+                  <th class="p-3">Status</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-slate-300">
+                <tr class="hover:bg-slate-900/50">
+                  <td class="p-3 font-bold text-sky-400">BD-2026-0981</td>
+                  <td class="p-3 font-sans font-semibold text-white">Md Rahim Mia</td>
+                  <td class="p-3">Tangail</td>
+                  <td class="p-3">SMT Machine Operator</td>
+                  <td class="p-3 text-emerald-400">✓ Verified</td>
+                  <td class="p-3 text-emerald-400">✓ Fit (FOMEMA)</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-sky-950 text-sky-300 border border-sky-800 text-[10px]">Calling Visa Ready</span></td>
+                </tr>
+                <tr class="hover:bg-slate-900/50">
+                  <td class="p-3 font-bold text-sky-400">BD-2026-0982</td>
+                  <td class="p-3 font-sans font-semibold text-white">Tariqul Islam</td>
+                  <td class="p-3">Narsingdi</td>
+                  <td class="p-3">SMT Machine Operator</td>
+                  <td class="p-3 text-emerald-400">✓ Verified</td>
+                  <td class="p-3 text-emerald-400">✓ Fit (FOMEMA)</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-sky-950 text-sky-300 border border-sky-800 text-[10px]">Calling Visa Ready</span></td>
+                </tr>
+                <tr class="hover:bg-slate-900/50">
+                  <td class="p-3 font-bold text-sky-400">BD-2026-0983</td>
+                  <td class="p-3 font-sans font-semibold text-white">Shakil Ahmed</td>
+                  <td class="p-3">Gazipur</td>
+                  <td class="p-3">QC Inspector</td>
+                  <td class="p-3 text-emerald-400">✓ Verified</td>
+                  <td class="p-3 text-emerald-400">✓ Fit (FOMEMA)</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-sky-950 text-sky-300 border border-sky-800 text-[10px]">Calling Visa Ready</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- VIEWPORT 2: MOBILE-FIRST WORKER PWA (PROBASHI KORMOSHETU)                  -->
+    <!-- ========================================================================= -->
+    <div id="view-mobile-container" class="flex-1 flex items-center justify-center p-6 bg-slate-950 overflow-y-auto custom-scrollbar">
+      
+      <!-- SMARTPHONE SIMULATOR FRAME -->
+      <div class="w-full max-w-[390px] h-[780px] bg-slate-900 rounded-[44px] border-[8px] border-slate-800 shadow-2xl flex flex-col overflow-hidden relative">
+        
+        <!-- Phone Top Speaker / Notch -->
+        <div class="h-6 bg-slate-950 flex items-center justify-between px-6 z-40 flex-shrink-0">
+          <span class="text-[10px] font-mono text-slate-400">09:41</span>
+          <div class="w-20 h-3.5 bg-slate-800 phone-notch"></div>
+          <span class="text-[10px] font-mono text-slate-400">5G 100%</span>
+        </div>
+
+        <!-- PWA Header -->
+        <div class="bg-[#0C4079] p-4 text-white flex-shrink-0 shadow-md">
+          <div class="flex items-center justify-between mb-1">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇧🇩</span>
+              <h1 class="font-bangla font-bold text-base leading-tight">প্রবাসী কর্মসেতু</h1>
+            </div>
+            <button onclick="speakBanglaGuide()" class="btn-spring bg-white/20 hover:bg-white/30 px-2.5 py-1 rounded-full text-[11px] font-bangla font-semibold flex items-center gap-1">
+              <span>🔊</span> নির্দেশিকা শুনুন
+            </button>
+          </div>
+          <p class="text-[11px] text-sky-200 font-bangla">সরকারি তত্ত্বাবধানে ১০০% দালালমুক্ত ও নিরাপদ অভিবাসন</p>
+        </div>
+
+        <!-- PWA Multi-Step Content Area -->
+        <div class="flex-1 overflow-y-auto p-4 custom-scrollbar bg-slate-950 font-bangla space-y-4">
+
+          <!-- PWA Step 1: Porichoy NID Verification -->
+          <div id="pwa-step-1" class="pwa-step-card bg-slate-900 rounded-2xl p-4 border border-slate-800 space-y-3">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+              <span class="text-xs font-bold text-sky-400 font-mono">ধাপ ১: পরিচয় যাচাই (NID)</span>
+              <span class="text-[10px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">পরিচয় এপিআই</span>
+            </div>
+
+            <div>
+              <label class="block text-xs text-slate-300 mb-1">জাতীয় পরিচয়পত্র (NID) নম্বর:</label>
+              <input type="text" id="pwaNidInput" value="19942691234567890" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-[#EA333F]">
+            </div>
+
+            <div>
+              <label class="block text-xs text-slate-300 mb-1">জন্ম তারিখ:</label>
+              <input type="text" value="15 June 1994" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-[#EA333F]">
+            </div>
+
+            <!-- Porichoy Verified Banner -->
+            <div class="bg-emerald-950/60 p-3 rounded-xl border border-emerald-800/40 text-xs space-y-1">
+              <p class="text-emerald-400 font-bold flex items-center gap-1"><span>✓</span> পরিচয়পত্র সফলভাবে যাচাইকৃত</p>
+              <p class="text-slate-300 text-[11px]">নাম: মো: রহিম মিয়া | জেলা: টাঙ্গাইল</p>
+            </div>
+
+            <div>
+              <label class="block text-xs text-slate-300 mb-1">কাজের অভিজ্ঞতা বা ট্রেড স্কিল:</label>
+              <select class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none">
+                <option>ফ্যাক্টরি মেশিন অপারেটর (ইলেকট্রনিক্স)</option>
+                <option>ওয়েল্ডার ও মেটাল ফ্যাব্রিকেটর</option>
+                <option>পাম অয়েল বাগান কর্মী</option>
+                <option>কনস্ট্রাকশন ওয়ার্কার</option>
+              </select>
+            </div>
+
+            <button onclick="goToPwaStep(2)" class="btn-spring w-full py-2.5 rounded-xl bg-[#EA333F] hover:bg-[#C71D29] text-white text-xs font-bold shadow-md">
+              পরবর্তী ধাপ: চাকরির প্রস্তাব দেখুন &rarr;
+            </button>
+          </div>
+
+          <!-- PWA Step 2: Matched Job Card -->
+          <div id="pwa-step-2" class="pwa-step-card hidden bg-slate-900 rounded-2xl p-4 border border-slate-800 space-y-3">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+              <span class="text-xs font-bold text-sky-400 font-mono">ধাপ ২: চূড়ান্ত চাকরির প্রস্তাব</span>
+              <span class="text-[10px] bg-[#EA333F]/30 text-red-300 px-2 py-0.5 rounded border border-red-500/40 font-bold">০ নগদ খরচ</span>
+            </div>
+
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-bold text-white">🇲🇾 ইনসারি টেকনোলজি (পেনাং)</span>
+                <span class="text-[10px] text-emerald-400 font-mono">eQuota #8819</span>
+              </div>
+              <p class="text-xs text-sky-300">পদবি: মেশিন অপারেটর (সেমিকন্ডাক্টর)</p>
+              
+              <div class="pt-2 border-t border-slate-800 space-y-1.5 text-xs">
+                <div class="flex justify-between">
+                  <span class="text-slate-400">মাসিক বেতন:</span>
+                  <span class="text-white font-bold font-mono">RM ১,৮০০ + ওভারটাইম</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">আনুমানিক আয়:</span>
+                  <span class="text-emerald-400 font-bold font-mono">৳৪৮,৫০০ / মাস</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">থাকা ও চিকিৎসা:</span>
+                  <span class="text-white font-bold">সম্পূর্ণ ফ্রি (Act 446)</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">বিমান টিকিট:</span>
+                  <span class="text-white font-bold">কোম্পানি বহন করবে</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Zero Dalal Alert -->
+            <div class="bg-red-950/60 p-3 rounded-xl border border-red-800/40 text-[11px] text-red-300">
+              ⚠️ <strong>সতর্কতা:</strong> কোনো দালাল বা মধ্যস্বত্বভোগীকে ১ টাকাও দেবেন না। সরকার নির্ধারিত ফি ছাড়া কোনো অতিরিক্ত অর্থ গ্রহণযোগ্য নয়।
+            </div>
+
+            <div class="flex gap-2">
+              <button onclick="goToPwaStep(1)" class="btn-spring px-3 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs">
+                &larr; পূর্বে
+              </button>
+              <button onclick="goToPwaStep(3)" class="btn-spring flex-1 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md">
+                চাকরিতে সম্মতি দিন &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- PWA Step 3: Cashless Wallet (Probashi Kallyan Bank) -->
+          <div id="pwa-step-3" class="pwa-step-card hidden bg-slate-900 rounded-2xl p-4 border border-slate-800 space-y-3">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+              <span class="text-xs font-bold text-sky-400 font-mono">ধাপ ৩: ব্যাংক ওয়ালেট ও কিস্তি</span>
+              <span class="text-[10px] bg-sky-950 text-sky-300 px-2 py-0.5 rounded border border-sky-800">প্রবাসী কল্যাণ ব্যাংক</span>
+            </div>
+
+            <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-2 text-xs">
+              <p class="text-slate-400">অনুমোদিত ডিজিটাল অভিবাসন ঋণ:</p>
+              <p class="font-mono font-extrabold text-xl text-white">৳৭৮,৯৯০ <span class="text-xs font-normal text-emerald-400">(০ নগদ প্রদেয়)</span></p>
+              
+              <div class="space-y-1 text-[11px] text-slate-400 pt-2 border-t border-slate-800 font-mono">
+                <div class="flex justify-between"><span>• বিমান টিকিট (Biman BD):</span><span class="text-slate-200">৳৩৫,০০০</span></div>
+                <div class="flex justify-between"><span>• মেডিকেল ও ফিঙ্গারপ্রিন্ট:</span><span class="text-slate-200">৳৮,০০০</span></div>
+                <div class="flex justify-between"><span>• BMET স্মার্ট কার্ড ও বীমা:</span><span class="text-slate-200">৳১৫,৯৯০</span></div>
+                <div class="flex justify-between"><span>• এজেন্সি প্রসেসিং ফি:</span><span class="text-slate-200">৳২০,০০০</span></div>
+              </div>
+            </div>
+
+            <div class="bg-sky-950/60 p-3 rounded-xl border border-sky-800/40 text-[11px] text-sky-300 space-y-1">
+              <p class="font-bold">মালয়েশিয়ায় সহজ কিস্তি পরিশোধ:</p>
+              <p>• প্রতি মাসে বেতন থেকে কর্তন: মাত্র RM ২৫০ (৬ মাস)</p>
+              <p class="text-emerald-300 font-bold">• ৭ম মাস থেকে ১০০% আয় নিজের পকেটে!</p>
+            </div>
+
+            <div class="flex gap-2">
+              <button onclick="goToPwaStep(2)" class="btn-spring px-3 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs">
+                &larr; পূর্বে
+              </button>
+              <button onclick="goToPwaStep(4)" class="btn-spring flex-1 py-2.5 rounded-xl bg-[#EA333F] hover:bg-[#C71D29] text-white text-xs font-bold shadow-md">
+                ভিডিও হলফনামা দিন &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- PWA Step 4: Anti-Extortion Video KYC & Smart QR Pass -->
+          <div id="pwa-step-4" class="pwa-step-card hidden bg-slate-900 rounded-2xl p-4 border border-slate-800 space-y-3">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+              <span class="text-xs font-bold text-emerald-400 font-mono">ধাপ ৪: ডিজিটাল স্মার্ট পাস</span>
+              <span class="text-[10px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">BMET অনুমোদিত</span>
+            </div>
+
+            <!-- Simulated QR Pass Card -->
+            <div class="bg-white text-slate-900 p-4 rounded-2xl text-center space-y-2 shadow-xl">
+              <div class="flex justify-between items-center text-[10px] font-mono text-slate-600 border-b pb-1">
+                <span>PEOPLES REPUBLIC OF BANGLADESH</span>
+                <span>BMET-2026</span>
+              </div>
+              <p class="font-bold text-sm text-[#0C4079]">ডিজিটাল ক্লিয়ারেন্স ও স্মার্ট ই-পাস</p>
+              
+              <!-- QR Code Mockup -->
+              <div class="w-32 h-32 mx-auto bg-slate-100 border-2 border-slate-900 rounded-xl flex items-center justify-center p-2">
+                <div class="w-full h-full bg-slate-900 flex items-center justify-center text-white text-[10px] font-mono rounded">
+                  [ QR PASS ]
+                </div>
+              </div>
+
+              <div class="text-[11px] font-mono space-y-0.5 text-left text-slate-800 pt-1">
+                <p><strong>নাম:</strong> মো: রহিম মিয়া</p>
+                <p><strong>NID:</strong> 19942691234567890</p>
+                <p><strong>কোম্পানি:</strong> Inari Technology Bhd (Penang)</p>
+                <p><strong>কলিং ভিসা:</strong> eVDR/MY/2026/8819</p>
+                <p class="text-emerald-700 font-bold">✓ জিরো-দালাল ভিডিও হলফনামা সম্পন্ন</p>
+              </div>
+            </div>
+
+            <button onclick="goToPwaStep(1)" class="btn-spring w-full py-2.5 rounded-xl bg-[#0C4079] hover:bg-[#1A5AA3] text-white text-xs font-bold shadow-md">
+              নতুন আবেদন করুন &circlearrowleft;
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Phone Bottom Home Bar -->
+        <div class="h-5 bg-slate-950 flex items-center justify-center flex-shrink-0">
+          <div class="w-32 h-1 bg-slate-700 rounded-full"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // Viewport Toggle Logic
+    function setView(mode) {
+      const desktop = document.getElementById('view-desktop-container');
+      const mobile = document.getElementById('view-mobile-container');
+      
+      document.querySelectorAll('.view-btn').forEach(b => {
+        b.className = 'view-btn px-4 py-1.5 rounded-lg text-slate-400 hover:text-white flex items-center gap-1.5';
+      });
+
+      if (mode === 'split') {
+        desktop.classList.remove('hidden');
+        mobile.classList.remove('hidden');
+        desktop.style.flex = '1';
+        mobile.style.flex = '1';
+        document.getElementById('btn-split').className = 'view-btn px-4 py-1.5 rounded-lg bg-[#0C4079] text-white font-bold flex items-center gap-1.5';
+      } else if (mode === 'desktop') {
+        desktop.classList.remove('hidden');
+        mobile.classList.add('hidden');
+        desktop.style.flex = '1';
+        document.getElementById('btn-desktop').className = 'view-btn px-4 py-1.5 rounded-lg bg-[#0C4079] text-white font-bold flex items-center gap-1.5';
+      } else if (mode === 'mobile') {
+        desktop.classList.add('hidden');
+        mobile.classList.remove('hidden');
+        mobile.style.flex = '1';
+        document.getElementById('btn-mobile').className = 'view-btn px-4 py-1.5 rounded-lg bg-[#0C4079] text-white font-bold flex items-center gap-1.5';
+      }
+    }
+
+    // PWA Step Navigation
+    function goToPwaStep(step) {
+      document.querySelectorAll('.pwa-step-card').forEach(c => c.classList.add('hidden'));
+      document.getElementById('pwa-step-' + step).classList.remove('hidden');
+    }
+
+    // Live Employer Financial Calculator
+    function updateWorkerCount(val) {
+      document.getElementById('workerCountDisplay').textContent = val + ' Workers';
+      calculateEmployerMath();
+    }
+
+    function calculateEmployerMath() {
+      const count = parseInt(document.getElementById('workerSlider').value) || 250;
+      const sector = document.getElementById('sectorSelect').value;
+      
+      let levyPerWorker = 1850;
+      if (sector === 'pltn') levyPerWorker = 640;
+      if (sector === 'const') levyPerWorker = 1850;
+
+      const levyTotal = count * levyPerWorker;
+      const visaTotal = count * 250;
+      const fomemaTotal = count * 450;
+      const flightTotal = count * 1300;
+      const sourcingTotal = count * 1500;
+      const grandTotal = levyTotal + visaTotal + fomemaTotal + flightTotal + sourcingTotal;
+
+      document.getElementById('levyTotal').textContent = 'RM ' + levyTotal.toLocaleString();
+      document.getElementById('visaTotal').textContent = 'RM ' + visaTotal.toLocaleString();
+      document.getElementById('fomemaTotal').textContent = 'RM ' + fomemaTotal.toLocaleString();
+      document.getElementById('flightTotal').textContent = 'RM ' + flightTotal.toLocaleString();
+      document.getElementById('sourcingTotal').textContent = 'RM ' + sourcingTotal.toLocaleString();
+      document.getElementById('grandTotal').textContent = 'RM ' + grandTotal.toLocaleString();
+    }
+
+    function speakBanglaGuide() {
+      if ('speechSynthesis' in window) {
+        const text = "প্রবাসী কর্মসেতুতে স্বাগতম। এটি বাংলাদেশ সরকারের তত্ত্বাবধানে মালয়েশিয়ায় সম্পূর্ণ দালালমুক্ত নিরাপদ চাকরির আবেদন পোর্টাল। আপনার জাতীয় পরিচয়পত্র নম্বর দিন এবং কোনো দালালকে নগদ টাকা দেবেন না।";
+        const msg = new SpeechSynthesisUtterance(text);
+        msg.lang = 'bn-BD';
+        window.speechSynthesis.speak(msg);
+      } else {
+        alert('অডিও নির্দেশিকা: প্রবাসী কর্মসেতুতে স্বাগতম। কোনো দালালকে টাকা দেবেন না।');
+      }
+    }
+
+    calculateEmployerMath();
+  </script>
+</body>
+</html>
