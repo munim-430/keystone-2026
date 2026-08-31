@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 350" width="1024" height="350">
+  <defs>
+    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4B5A" />
+      <stop offset="100%" stop-color="#E62E3D" />
+    </linearGradient>
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <style>
+    .navy-text { fill: #0C4079; font-family: 'Figtree', 'Montserrat', 'Inter', sans-serif; font-weight: 800; }
+    .badge-text { fill: #FFFFFF; font-family: 'Figtree', 'Montserrat', 'Inter', sans-serif; font-weight: 900; font-style: italic; letter-spacing: 0.28em; }
+  </style>
+  <g>
+    <text x="-4" y="200" class="navy-text" font-size="220" letter-spacing="-0.03em">Keyst</text>
+    <path d="M248,155 L328,348 L278,348 L218,185 Z" fill="#0C4079" />
+    <g transform="translate(620, 48)">
+      <rect x="0" y="0" width="132" height="156" rx="40" ry="40" fill="url(#coralGrad)" />
+      <circle cx="66" cy="78" r="48" fill="#FFFFFF" />
+      <line x1="18" y1="78" x2="114" y2="78" stroke="#E62E3D" stroke-width="2.5" />
+      <ellipse cx="66" cy="78" rx="48" ry="24" fill="none" stroke="#E62E3D" stroke-width="2.5" stroke-dasharray="150" />
+      <ellipse cx="66" cy="78" rx="48" ry="40" fill="none" stroke="#E62E3D" stroke-width="2.5" stroke-dasharray="150" />
+      <line x1="66" y1="30" x2="66" y2="126" stroke="#E62E3D" stroke-width="2.5" />
+      <ellipse cx="66" cy="78" rx="24" ry="48" fill="none" stroke="#E62E3D" stroke-width="2.5" />
+      <ellipse cx="66" cy="78" rx="38" ry="48" fill="none" stroke="#E62E3D" stroke-width="2.5" />
+      <circle cx="66" cy="78" r="48" fill="none" stroke="#E62E3D" stroke-width="2.5" />
+    </g>
+    <text x="756" y="200" class="navy-text" font-size="220" letter-spacing="-0.03em">ne</text>
+  </g>
+  <g filter="url(#badgeShadow)">
+    <polygon points="368,230 1024,230 1000,348 344,348" fill="#202020" />
+  </g>
+  <text x="405" y="322" class="badge-text" font-size="94">GLOBAL</text>
+</svg>

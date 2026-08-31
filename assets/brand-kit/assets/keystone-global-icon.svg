@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="iconBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C4079" />
+      <stop offset="100%" stop-color="#072448" />
+    </linearGradient>
+    <linearGradient id="iconSquircleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4B5A" />
+      <stop offset="100%" stop-color="#E62E3D" />
+    </linearGradient>
+    <filter id="iconGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#E62E3D" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#iconBgGrad)" />
+  <g transform="translate(106, 86)" filter="url(#iconGlow)">
+    <rect x="0" y="0" width="300" height="340" rx="88" ry="88" fill="url(#iconSquircleGrad)" />
+    <circle cx="150" cy="170" r="110" fill="#FFFFFF" />
+    <line x1="40" y1="170" x2="260" y2="170" stroke="#E62E3D" stroke-width="6" />
+    <ellipse cx="150" cy="170" rx="110" ry="55" fill="none" stroke="#E62E3D" stroke-width="6" />
+    <ellipse cx="150" cy="170" rx="110" ry="90" fill="none" stroke="#E62E3D" stroke-width="6" />
+    <line x1="150" y1="60" x2="150" y2="280" stroke="#E62E3D" stroke-width="6" />
+    <ellipse cx="150" cy="170" rx="55" ry="110" fill="none" stroke="#E62E3D" stroke-width="6" />
+    <ellipse cx="150" cy="170" rx="88" ry="110" fill="none" stroke="#E62E3D" stroke-width="6" />
+    <circle cx="150" cy="170" r="110" fill="none" stroke="#E62E3D" stroke-width="6" />
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600" width="1050" height="600">
+  <defs>
+    <linearGradient id="cardFrontBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#072448" />
+      <stop offset="100%" stop-color="#0C4079" />
+    </linearGradient>
+  </defs>
+  <rect width="1050" height="600" rx="32" ry="32" fill="url(#cardFrontBg)" />
+  <g transform="translate(180, 180) scale(0.68)">
+    <text x="-4" y="200" fill="#FFFFFF" font-family="'Figtree', sans-serif" font-weight="800" font-size="220">Keyst</text>
+    <path d="M248,155 L328,348 L278,348 L218,185 Z" fill="#FFFFFF" />
+    <g transform="translate(620, 48)">
+      <rect x="0" y="0" width="132" height="156" rx="40" ry="40" fill="#EA333F" />
+      <circle cx="66" cy="78" r="48" fill="#FFFFFF" />
+      <line x1="18" y1="78" x2="114" y2="78" stroke="#EA333F" stroke-width="2.5" />
+      <ellipse cx="66" cy="78" rx="48" ry="24" fill="none" stroke="#EA333F" stroke-width="2.5" />
+      <ellipse cx="66" cy="78" rx="48" ry="40" fill="none" stroke="#EA333F" stroke-width="2.5" />
+      <line x1="66" y1="30" x2="66" y2="126" stroke="#EA333F" stroke-width="2.5" />
+      <ellipse cx="66" cy="78" rx="24" ry="48" fill="none" stroke="#EA333F" stroke-width="2.5" />
+      <ellipse cx="66" cy="78" rx="38" ry="48" fill="none" stroke="#EA333F" stroke-width="2.5" />
+      <circle cx="66" cy="78" r="48" fill="none" stroke="#EA333F" stroke-width="2.5" />
+    </g>
+    <text x="756" y="200" fill="#FFFFFF" font-family="'Figtree', sans-serif" font-weight="800" font-size="220">ne</text>
+    <polygon points="368,230 1024,230 1000,348 344,348" fill="#0E2A4A" stroke="#1E4068" stroke-width="2" />
+    <text x="405" y="322" fill="#FFFFFF" font-family="'Figtree', sans-serif" font-weight="900" font-style: italic; letter-spacing: 0.28em; font-size="94">GLOBAL</text>
+  </g>
+  <text x="525" y="470" fill="#94A3B8" font-family="'Inter', sans-serif" font-weight="600" font-size="18" text-anchor="middle" letter-spacing="0.15em">EDUCATION &middot; MANPOWER &middot; TRADE</text>
+</svg>

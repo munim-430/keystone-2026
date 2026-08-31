@@ -1,0 +1,49 @@
+/**
+ * Keystone Global Design Tokens
+ * Generated automatically from Brand Identity System
+ */
+:root {
+  /* Brand Core Colors */
+  --kg-color-navy: #0C4079;
+  --kg-color-navy-dark: #072448;
+  --kg-color-navy-light: #1A5AA3;
+  --kg-color-coral: #EA333F;
+  --kg-color-coral-light: #FF5E6D;
+  --kg-color-coral-dark: #C71D29;
+  --kg-color-charcoal: #202020;
+  
+  /* Corridor Sub-brands */
+  --kg-color-education: #F598F2;
+  --kg-color-manpower: #F59E0B;
+  --kg-color-export: #10B981;
+
+  /* Neutrals & Surfaces */
+  --kg-bg-surface: #FFFFFF;
+  --kg-bg-subtle: #F8FAFC;
+  --kg-bg-muted: #F1F5F9;
+  --kg-text-primary: #0F172A;
+  --kg-text-secondary: #475569;
+  --kg-text-muted: #94A3B8;
+  --kg-border-color: #E2E8F0;
+
+  /* Typography */
+  --kg-font-display: 'Figtree', 'Montserrat', system-ui, sans-serif;
+  --kg-font-body: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --kg-font-mono: 'JetBrains Mono', monospace;
+
+  /* Physics & Transitions */
+  --kg-ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --kg-transition-fast: 150ms var(--kg-ease-spring);
+  --kg-transition-normal: 300ms var(--kg-ease-spring);
+  --kg-transition-slow: 600ms var(--kg-ease-spring);
+}
+
+.dark {
+  --kg-bg-surface: #0A0F1D;
+  --kg-bg-subtle: #0F172A;
+  --kg-bg-muted: #1E293B;
+  --kg-text-primary: #F8FAFC;
+  --kg-text-secondary: #CBD5E1;
+  --kg-text-muted: #64748B;
+  --kg-border-color: #1E293B;
+}

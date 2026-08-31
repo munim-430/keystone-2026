@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 312" width="820" height="312">
+  <defs>
+    <linearGradient id="fbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#072448" />
+      <stop offset="60%" stop-color="#0C4079" />
+      <stop offset="100%" stop-color="#0A1E36" />
+    </linearGradient>
+  </defs>
+  <rect width="820" height="312" fill="url(#fbBg)" />
+  <circle cx="750" cy="50" r="180" fill="#EA333F" opacity="0.12" filter="blur(40px)" />
+  <circle cx="100" cy="280" r="140" fill="#F598F2" opacity="0.08" filter="blur(30px)" />
+
+  <g transform="translate(60, 50) scale(0.48)">
+    <text x="-4" y="200" fill="#FFFFFF" font-family="'Figtree', sans-serif" font-weight="800" font-size="220">Keyst</text>
+    <path d="M248,155 L328,348 L278,348 L218,185 Z" fill="#FFFFFF" />
+    <g transform="translate(620, 48)">
+      <rect x="0" y="0" width="132" height="156" rx="40" ry="40" fill="#EA333F" />
+      <circle cx="66" cy="78" r="48" fill="#FFFFFF" />
+      <line x1="18" y1="78" x2="114" y2="78" stroke="#EA333F" stroke-width="2.5" />
+      <ellipse cx="66" cy="78" rx="48" ry="24" fill="none" stroke="#EA333F" stroke-width="2.5" />
+      <ellipse cx="66" cy="78" rx="48" ry="40" fill="none" stroke="#EA333F" stroke-width="2.5" />
+      <line x1="66" y1="30" x2="66" y2="126" stroke="#EA333F" stroke-width="2.5" />
+      <ellipse cx="66" cy="78" rx="24" ry="48" fill="none" stroke="#EA333F" stroke-width="2.5" />
+      <ellipse cx="66" cy="78" rx="38" ry="48" fill="none" stroke="#EA333F" stroke-width="2.5" />
+      <circle cx="66" cy="78" r="48" fill="none" stroke="#EA333F" stroke-width="2.5" />
+    </g>
+    <text x="756" y="200" fill="#FFFFFF" font-family="'Figtree', sans-serif" font-weight="800" font-size="220">ne</text>
+    <polygon points="368,230 1024,230 1000,348 344,348" fill="#0E2A4A" stroke="#1E4068" stroke-width="2" />
+    <text x="405" y="322" fill="#FFFFFF" font-family="'Figtree', sans-serif" font-weight="900" font-style="italic" letter-spacing="0.28em" font-size="94">GLOBAL</text>
+  </g>
+
+  <!-- Slogan & Highlights -->
+  <text x="60" y="165" fill="#FFFFFF" font-family="'Figtree', sans-serif" font-weight="800" font-size="26">Global Education &middot; Manpower &middot; Trade</text>
+  <text x="60" y="195" fill="#F598F2" font-family="'Inter', sans-serif" font-weight="600" font-size="16">100% No Visa, No Fee Guarantee &middot; &#2547;120,000 Flat Processing</text>
+
+  <!-- Corridor Badges -->
+  <g transform="translate(60, 230)">
+    <rect x="0" y="0" width="150" height="34" rx="17" fill="#F598F2" fill-opacity="0.15" stroke="#F598F2" stroke-width="1.5" />
+    <text x="75" y="22" fill="#F598F2" font-family="'Inter', sans-serif" font-weight="700" font-size="12" text-anchor="middle">🇰🇷 South Korea D-2</text>
+
+    <rect x="165" y="0" width="160" height="34" rx="17" fill="#F59E0B" fill-opacity="0.15" stroke="#F59E0B" stroke-width="1.5" />
+    <text x="245" y="22" fill="#F59E0B" font-family="'Inter', sans-serif" font-weight="700" font-size="12" text-anchor="middle">✈️ Overseas Manpower</text>
+
+    <rect x="340" y="0" width="160" height="34" rx="17" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-width="1.5" />
+    <text x="420" y="22" fill="#10B981" font-family="'Inter', sans-serif" font-weight="700" font-size="12" text-anchor="middle">📦 Export &mdash; Import</text>
+  </g>
+
+  <!-- Contact Pill -->
+  <g transform="translate(600, 230)">
+    <rect x="0" y="0" width="170" height="36" rx="18" fill="#EA333F" />
+    <text x="85" y="23" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="700" font-size="13" text-anchor="middle">WhatsApp Direct</text>
+  </g>
+</svg>

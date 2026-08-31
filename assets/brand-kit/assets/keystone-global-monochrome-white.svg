@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 350" width="1024" height="350">
+  <style>
+    .mono-white { fill: #FFFFFF; font-family: 'Figtree', 'Montserrat', 'Inter', sans-serif; font-weight: 800; }
+    .mono-badge-w { fill: #000000; font-family: 'Figtree', 'Montserrat', 'Inter', sans-serif; font-weight: 900; font-style: italic; letter-spacing: 0.28em; }
+  </style>
+  <text x="-4" y="200" class="mono-white" font-size="220" letter-spacing="-0.03em">Keyst</text>
+  <path d="M248,155 L328,348 L278,348 L218,185 Z" fill="#FFFFFF" />
+  <g transform="translate(620, 48)">
+    <rect x="0" y="0" width="132" height="156" rx="40" ry="40" fill="#FFFFFF" />
+    <circle cx="66" cy="78" r="48" fill="#000000" />
+    <line x1="18" y1="78" x2="114" y2="78" stroke="#FFFFFF" stroke-width="2.5" />
+    <ellipse cx="66" cy="78" rx="48" ry="24" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+    <ellipse cx="66" cy="78" rx="48" ry="40" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+    <line x1="66" y1="30" x2="66" y2="126" stroke="#FFFFFF" stroke-width="2.5" />
+    <ellipse cx="66" cy="78" rx="24" ry="48" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+    <ellipse cx="66" cy="78" rx="38" ry="48" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+    <circle cx="66" cy="78" r="48" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+  </g>
+  <text x="756" y="200" class="mono-white" font-size="220" letter-spacing="-0.03em">ne</text>
+  <polygon points="368,230 1024,230 1000,348 344,348" fill="#FFFFFF" />
+  <text x="405" y="322" class="mono-badge-w" font-size="94">GLOBAL</text>
+</svg>
