@@ -1,0 +1,470 @@
+{
+  "audit_timestamp": "2026-10-01T11:03:22Z",
+  "target_source": "/home/munim/keystone-2026/crm/b2b_call_sheet.csv",
+  "total_targets_probed": 678,
+  "http_success_200": 678,
+  "http_success_rate_percent": 100.0,
+  "whatsapp_business_verified": 215,
+  "whatsapp_business_percent": 31.71,
+  "whatsapp_standard_registered": 463,
+  "whatsapp_errors": 0,
+  "average_ping_latency_ms": 485.9,
+  "total_audit_duration_seconds": 54.13,
+  "carrier_distribution": {
+    "Grameenphone": 431,
+    "Robi": 74,
+    "Airtel (Robi)": 51,
+    "Banglalink": 103,
+    "Teletalk": 19
+  },
+  "district_breakdown": {
+    "Rajshahi": {
+      "total": 66,
+      "business_verified": 26
+    },
+    "Bagerhat": {
+      "total": 11,
+      "business_verified": 4
+    },
+    "Barguna": {
+      "total": 2,
+      "business_verified": 0
+    },
+    "Barishal": {
+      "total": 16,
+      "business_verified": 7
+    },
+    "Bhola": {
+      "total": 4,
+      "business_verified": 1
+    },
+    "Bogura": {
+      "total": 21,
+      "business_verified": 8
+    },
+    "Brahmanbaria": {
+      "total": 7,
+      "business_verified": 4
+    },
+    "Chandpur": {
+      "total": 11,
+      "business_verified": 2
+    },
+    "Chuadanga": {
+      "total": 8,
+      "business_verified": 1
+    },
+    "CoxsBazar": {
+      "total": 1,
+      "business_verified": 1
+    },
+    "Cumilla": {
+      "total": 62,
+      "business_verified": 24
+    },
+    "Dinajpur": {
+      "total": 27,
+      "business_verified": 3
+    },
+    "Faridpur": {
+      "total": 4,
+      "business_verified": 0
+    },
+    "Feni": {
+      "total": 15,
+      "business_verified": 8
+    },
+    "Gaibandha": {
+      "total": 5,
+      "business_verified": 2
+    },
+    "Gopalganj": {
+      "total": 7,
+      "business_verified": 2
+    },
+    "Habiganj": {
+      "total": 16,
+      "business_verified": 9
+    },
+    "Jamalpur": {
+      "total": 16,
+      "business_verified": 4
+    },
+    "Jashore": {
+      "total": 19,
+      "business_verified": 6
+    },
+    "Jhenaidah": {
+      "total": 15,
+      "business_verified": 4
+    },
+    "Joypurhat": {
+      "total": 8,
+      "business_verified": 2
+    },
+    "Khulna": {
+      "total": 37,
+      "business_verified": 8
+    },
+    "Kishoreganj": {
+      "total": 26,
+      "business_verified": 5
+    },
+    "Kurigram": {
+      "total": 2,
+      "business_verified": 0
+    },
+    "Kushtia": {
+      "total": 28,
+      "business_verified": 12
+    },
+    "Lalmonirhat": {
+      "total": 2,
+      "business_verified": 0
+    },
+    "Laxmipur": {
+      "total": 2,
+      "business_verified": 0
+    },
+    "Madaripur": {
+      "total": 14,
+      "business_verified": 5
+    },
+    "Magura": {
+      "total": 4,
+      "business_verified": 0
+    },
+    "Moulvibazar": {
+      "total": 20,
+      "business_verified": 11
+    },
+    "Mymensingh": {
+      "total": 32,
+      "business_verified": 13
+    },
+    "Naogaon": {
+      "total": 5,
+      "business_verified": 2
+    },
+    "Narail": {
+      "total": 7,
+      "business_verified": 0
+    },
+    "Natore": {
+      "total": 6,
+      "business_verified": 0
+    },
+    "Netrokona": {
+      "total": 7,
+      "business_verified": 1
+    },
+    "Nilphamari": {
+      "total": 7,
+      "business_verified": 1
+    },
+    "Noakhali": {
+      "total": 5,
+      "business_verified": 2
+    },
+    "Pabna": {
+      "total": 11,
+      "business_verified": 3
+    },
+    "Panchagarh": {
+      "total": 5,
+      "business_verified": 1
+    },
+    "Patuakhali": {
+      "total": 2,
+      "business_verified": 2
+    },
+    "Pirojpur": {
+      "total": 5,
+      "business_verified": 1
+    },
+    "Rangpur": {
+      "total": 30,
+      "business_verified": 9
+    },
+    "Satkhira": {
+      "total": 6,
+      "business_verified": 4
+    },
+    "Shariatpur": {
+      "total": 7,
+      "business_verified": 0
+    },
+    "Sherpur": {
+      "total": 11,
+      "business_verified": 2
+    },
+    "Sirajganj": {
+      "total": 24,
+      "business_verified": 5
+    },
+    "Sunamganj": {
+      "total": 5,
+      "business_verified": 1
+    },
+    "Tangail": {
+      "total": 15,
+      "business_verified": 7
+    },
+    "Thakurgaon": {
+      "total": 12,
+      "business_verified": 2
+    }
+  },
+  "top_verified_business_samples": [
+    {
+      "id": "center-0001",
+      "registered_name": "British Language Club & IELTS Int'l Test Centre Rajshahi Venue",
+      "whatsapp_business_name": "British Language Club Rajshahi Campus",
+      "phone": "+8801711004605",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 645,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/468586700_1308431653487646_8871768356816..."
+    },
+    {
+      "id": "center-0002",
+      "registered_name": "Project Headway",
+      "whatsapp_business_name": "Project Headway",
+      "phone": "+8801714179491",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 590,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/677627157_4438656956398733_6806922788625..."
+    },
+    {
+      "id": "center-0003",
+      "registered_name": "IELTS Online",
+      "whatsapp_business_name": "British Language Club Rajshahi Campus",
+      "phone": "+8801711004605",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 571,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/468586700_1308431653487646_8871768356816..."
+    },
+    {
+      "id": "center-0004",
+      "registered_name": "Mars Education",
+      "whatsapp_business_name": "marseducation 2020",
+      "phone": "+8801709684523",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 520,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/463308438_2051961235243833_5458047188037..."
+    },
+    {
+      "id": "center-0007",
+      "registered_name": "IELTS TEST CENTRE IN RAJSHAHI",
+      "whatsapp_business_name": "British",
+      "phone": "+8801870121007",
+      "district": "Rajshahi",
+      "carrier": "Robi",
+      "latency_ms": 562,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/456563962_1750253565710401_1619146338035..."
+    },
+    {
+      "id": "center-0011",
+      "registered_name": "Esperto Learning",
+      "whatsapp_business_name": "Nazmus Sakib-Esperto Learning",
+      "phone": "+8801711283634",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 845,
+      "avatar_url": "https://static.whatsapp.net/rsrc.php/v4/yY/r/N3wx3_N3oMg.png..."
+    },
+    {
+      "id": "center-0012",
+      "registered_name": "Advanced English",
+      "whatsapp_business_name": "Robiul Islam",
+      "phone": "+8801744751802",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 587,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/627806845_1676940373412374_3464104473701..."
+    },
+    {
+      "id": "center-0014",
+      "registered_name": "The Bright Academy",
+      "whatsapp_business_name": "The Bright Academy",
+      "phone": "+8801779428847",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 814,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/699680911_2466125380515791_7521787966847..."
+    },
+    {
+      "id": "center-0017",
+      "registered_name": "Hallo German Language Institute Rajshahi",
+      "whatsapp_business_name": "Hallo German Language Institute for Ausbildung in Rajshahi",
+      "phone": "+8801727025029",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 649,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/422961890_358520883640063_74746751313839..."
+    },
+    {
+      "id": "center-0018",
+      "registered_name": "Care Korean Language Center Rajshahi",
+      "whatsapp_business_name": "Care korean language center, Rajshahi",
+      "phone": "+8801328115594",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 485,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/677264051_1311740094491733_6141908861594..."
+    },
+    {
+      "id": "center-0020",
+      "registered_name": "Ekush Korean language - Rajshahi কোরিয়ান ভাষা শিখুন রাজশাহীতে",
+      "whatsapp_business_name": "Ekush Language institute",
+      "phone": "+8801713290275",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 841,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/425272973_810558704602648_15139041047892..."
+    },
+    {
+      "id": "center-0021",
+      "registered_name": "Mehul Japanese Language Education Center, Rajshahi Branch",
+      "whatsapp_business_name": "Mehul - Rajshahi Branch",
+      "phone": "+8801879062324",
+      "district": "Rajshahi",
+      "carrier": "Robi",
+      "latency_ms": 646,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/534417572_1262338382397772_6369773086094..."
+    },
+    {
+      "id": "center-0025",
+      "registered_name": "STRIVE ENGLISH LANGUAGE CENTRE",
+      "whatsapp_business_name": "subasmardi4",
+      "phone": "+8801939229747",
+      "district": "Rajshahi",
+      "carrier": "Banglalink",
+      "latency_ms": 584,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/505468785_676019945247344_11194774686745..."
+    },
+    {
+      "id": "center-0032",
+      "registered_name": "Hasan Plus English",
+      "whatsapp_business_name": "Hasan Plus English",
+      "phone": "+8801316339619",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 489,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/534426046_1824679614803518_3862120485646..."
+    },
+    {
+      "id": "center-0034",
+      "registered_name": "American Corner Rajshahi",
+      "whatsapp_business_name": "Mahmud Hasan",
+      "phone": "+8801730406571",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 619,
+      "avatar_url": "https://static.whatsapp.net/rsrc.php/v4/yY/r/N3wx3_N3oMg.png..."
+    },
+    {
+      "id": "center-0038",
+      "registered_name": "Arefin Hasan",
+      "whatsapp_business_name": "AREFIN HASAN",
+      "phone": "+8801718666402",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 548,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/475951385_2384206888644462_8780756885947..."
+    },
+    {
+      "id": "center-0043",
+      "registered_name": "21 language and It Institute rajshahi Branch",
+      "whatsapp_business_name": "British Language Club Rajshahi Campus",
+      "phone": "+8801711004605",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 515,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/468586700_1308431653487646_8871768356816..."
+    },
+    {
+      "id": "center-0064",
+      "registered_name": "S@lman English Academy",
+      "whatsapp_business_name": "Salman Farsi",
+      "phone": "+8801757012914",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 494,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/670998898_1326203476046577_4452307174050..."
+    },
+    {
+      "id": "center-0068",
+      "registered_name": "Deep Learning Method-DLM",
+      "whatsapp_business_name": "Deep Learning Method",
+      "phone": "+8801794007944",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 595,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/826172365_4642309746091557_4365465434603..."
+    },
+    {
+      "id": "center-0069",
+      "registered_name": "English Learning Home",
+      "whatsapp_business_name": "British Language Club Rajshahi Campus",
+      "phone": "+8801711004605",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 512,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/468586700_1308431653487646_8871768356816..."
+    },
+    {
+      "id": "center-0072",
+      "registered_name": "English Academy -Badsha sir",
+      "whatsapp_business_name": "Md. Fazlur Rahman",
+      "phone": "+8801714837388",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 721,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/544494339_669572102674241_40562498695043..."
+    },
+    {
+      "id": "center-0073",
+      "registered_name": "Shaif's English",
+      "whatsapp_business_name": "Saif ~",
+      "phone": "+8801784832301",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 588,
+      "avatar_url": "https://static.whatsapp.net/rsrc.php/v4/yY/r/N3wx3_N3oMg.png..."
+    },
+    {
+      "id": "center-0079",
+      "registered_name": "Job English in Rajshahi",
+      "whatsapp_business_name": "British Language Club Rajshahi Campus",
+      "phone": "+8801711004605",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 501,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/468586700_1308431653487646_8871768356816..."
+    },
+    {
+      "id": "center-0080",
+      "registered_name": "MIE English Academy Rajshahi",
+      "whatsapp_business_name": "Preeti",
+      "phone": "+8801332505927",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 488,
+      "avatar_url": "https://static.whatsapp.net/rsrc.php/v4/yY/r/N3wx3_N3oMg.png..."
+    },
+    {
+      "id": "center-0411",
+      "registered_name": "JLCC RAJSHAHI (global education consultancy firm)",
+      "whatsapp_business_name": "Jlcc Rajshahi",
+      "phone": "+8801713113538",
+      "district": "Rajshahi",
+      "carrier": "Grameenphone",
+      "latency_ms": 577,
+      "avatar_url": "https://pps.whatsapp.net/v/t61.24694-24/485030919_1024704329597270_6492960986789..."
+    }
+  ]
+}
