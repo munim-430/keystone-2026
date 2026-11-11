@@ -1,5 +1,6 @@
 -- =========================================================
 -- KEYSTONE B2B & STUDENT CRM - SUPABASE DATABASE SCHEMA
+-- Project: https://myuvhvmdftaxvdhrwwmu.supabase.co
 -- Paste this script into your Supabase SQL Editor and click RUN
 -- =========================================================
 
@@ -38,20 +39,23 @@ CREATE TABLE IF NOT EXISTS public.b2b_students (
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- 3. Enable Row Level Security (RLS) & Public Access Policies
+-- 3. Enable Row Level Security (RLS)
 ALTER TABLE public.b2b_centers ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.b2b_students ENABLE ROW LEVEL SECURITY;
 
+-- 4. Create Policies for Anon & Authenticated Roles
 DROP POLICY IF EXISTS "Allow public read/write access to centers" ON public.b2b_centers;
 CREATE POLICY "Allow public read/write access to centers"
   ON public.b2b_centers FOR ALL
+  TO anon, authenticated
   USING (true) WITH CHECK (true);
 
 DROP POLICY IF EXISTS "Allow public read/write access to students" ON public.b2b_students;
 CREATE POLICY "Allow public read/write access to students"
   ON public.b2b_students FOR ALL
+  TO anon, authenticated
   USING (true) WITH CHECK (true);
 
--- 4. Enable Realtime Replication for Live Sync
+-- 5. Enable Realtime Replication for Live Multi-Device Sync
 ALTER PUBLICATION supabase_realtime ADD TABLE public.b2b_centers;
 ALTER PUBLICATION supabase_realtime ADD TABLE public.b2b_students;
