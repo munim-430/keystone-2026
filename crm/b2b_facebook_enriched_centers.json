@@ -1,0 +1,92 @@
+[
+  {
+    "id": "center-0001",
+    "name": "British Language Club & IELTS Int'l Test Centre Rajshahi Venue",
+    "district": "Rajshahi",
+    "phone": "+8801711004605",
+    "url": "https://www.facebook.com/ProfMEALord/",
+    "status": "New",
+    "priority": "Medium",
+    "lastContact": "",
+    "followUpDate": "",
+    "employee": "",
+    "notes": [],
+    "facebook_url": "https://www.facebook.com/ProfMEALord/",
+    "extracted_phones": [],
+    "facebook_followers": "",
+    "verification_status": "FB_LINKED"
+  },
+  {
+    "id": "center-0002",
+    "name": "Project Headway",
+    "district": "Rajshahi",
+    "phone": "+8801714179491",
+    "url": "https://www.facebook.com/headway.englishteaching/",
+    "status": "New",
+    "priority": "Medium",
+    "lastContact": "",
+    "followUpDate": "",
+    "employee": "",
+    "notes": [],
+    "facebook_url": "https://www.facebook.com/headway.englishteaching/",
+    "extracted_phones": [
+      "+8801714179492",
+      "+8801714179491"
+    ],
+    "facebook_followers": "",
+    "verification_status": "VERIFIED_EXACT_MATCH"
+  },
+  {
+    "id": "center-0003",
+    "name": "IELTS Online",
+    "district": "Rajshahi",
+    "phone": "+8801711004605",
+    "url": "https://10ms.io/GKYlA",
+    "status": "New",
+    "priority": "Medium",
+    "lastContact": "",
+    "followUpDate": "",
+    "employee": "",
+    "notes": [],
+    "facebook_url": "",
+    "extracted_phones": [],
+    "facebook_followers": "",
+    "verification_status": "NO_FB"
+  },
+  {
+    "id": "center-0004",
+    "name": "Mars Education",
+    "district": "Rajshahi",
+    "phone": "+8801709684523",
+    "url": "https://www.facebook.com/marseducation2020/",
+    "status": "New",
+    "priority": "Medium",
+    "lastContact": "",
+    "followUpDate": "",
+    "employee": "",
+    "notes": [],
+    "facebook_url": "https://www.facebook.com/marseducation2020/",
+    "extracted_phones": [],
+    "facebook_followers": "",
+    "verification_status": "FB_LINKED"
+  },
+  {
+    "id": "center-0005",
+    "name": "Sun-Dial Coaching Center",
+    "district": "Rajshahi",
+    "phone": "+8801781391616",
+    "url": "https://www.facebook.com/Sundial86/",
+    "status": "New",
+    "priority": "Medium",
+    "lastContact": "",
+    "followUpDate": "",
+    "employee": "",
+    "notes": [],
+    "facebook_url": "https://www.facebook.com/Sundial86/",
+    "extracted_phones": [
+      "+8801781391616"
+    ],
+    "facebook_followers": "",
+    "verification_status": "VERIFIED_EXACT_MATCH"
+  }
+]
