@@ -29,7 +29,7 @@
         <!-- Top Actions -->
         <div class="nav-actions">
           <!-- Supabase Live Sync Status Pill -->
-          <button id="openSyncModalBtn" class="btn btn-sync-status" title="Supabase লাইভ ক্লাউড সিঙ্ক স্ট্যাটাস ও সেটআপ">
+          <button id="openSyncModalBtn" class="btn btn-sync-status" title="Supabase লাইভ ক্লাউড সিঙ্ক স্ট্যাটাস ও সেটআপ" onclick="document.getElementById('cloudSyncModal').classList.remove('hidden')">
             <span class="sync-dot sync-offline" id="globalSyncDot"></span>
             <span id="globalSyncText">ক্লাউড: অফলাইন</span>
           </button>
@@ -408,7 +408,7 @@
               <p class="modal-subtitle">সকল কলার ও ম্যানেজারের মাঝে রিয়েল-টাইম ডাটা সিঙ্ক্রোনাইজেশন</p>
             </div>
           </div>
-          <button id="closeSyncModalBtn" class="modal-close-btn">&times;</button>
+          <button id="closeSyncModalBtn" class="modal-close-btn" onclick="document.getElementById('cloudSyncModal').classList.add('hidden')">&times;</button>
         </div>
 
         <div class="modal-body">
@@ -458,6 +458,6 @@
 
   </div>
 
-  <script type="module" src="./app.js?v=supabase-sync-v1"></script>
+  <script type="module" src="./app.js?v=supabase-sync-v2"></script>
 </body>
 </html>

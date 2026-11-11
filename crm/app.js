@@ -1474,4 +1474,8 @@ function exportDataJSON() {
   downloadAnchor.remove();
 }
 
-document.addEventListener('DOMContentLoaded', initApp);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}

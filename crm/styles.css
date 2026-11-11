@@ -1764,6 +1764,10 @@ body {
   transition: all var(--transition-fast);
 }
 
+.btn-sync-status * {
+  pointer-events: none;
+}
+
 .btn-sync-status:hover {
   border-color: var(--primary);
   box-shadow: 0 0 10px var(--primary-glow);
