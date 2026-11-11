@@ -8,20 +8,16 @@ CREATE TABLE IF NOT EXISTS public.b2b_centers (
   id TEXT PRIMARY KEY,
   name TEXT NOT NULL,
   district TEXT NOT NULL,
-  location TEXT,
   phone TEXT,
-  "altPhone" TEXT,
-  contactPerson TEXT,
-  designation TEXT,
-  email TEXT,
+  url TEXT,
   link TEXT,
   status TEXT DEFAULT 'New',
   priority TEXT DEFAULT 'Medium',
   "lastContact" TEXT,
+  "followUpDate" TEXT,
+  "studentCount" INTEGER DEFAULT 0,
   "referredStudents" INTEGER DEFAULT 0,
-  "enrolledStudents" INTEGER DEFAULT 0,
-  "commissionRate" INTEGER DEFAULT 5000,
-  "commissionPaid" INTEGER DEFAULT 0,
+  employee TEXT,
   notes JSONB DEFAULT '[]'::jsonb,
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
@@ -46,10 +42,12 @@ CREATE TABLE IF NOT EXISTS public.b2b_students (
 ALTER TABLE public.b2b_centers ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.b2b_students ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Allow public read/write access to centers" ON public.b2b_centers;
 CREATE POLICY "Allow public read/write access to centers"
   ON public.b2b_centers FOR ALL
   USING (true) WITH CHECK (true);
 
+DROP POLICY IF EXISTS "Allow public read/write access to students" ON public.b2b_students;
 CREATE POLICY "Allow public read/write access to students"
   ON public.b2b_students FOR ALL
   USING (true) WITH CHECK (true);

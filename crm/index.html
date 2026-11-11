@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="./keystone_logo_official.png">
   <link rel="stylesheet" href="./styles.css">
+  <!-- Supabase Official JS SDK for Realtime Multi-User Sync -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
   <div id="app">
@@ -26,6 +28,12 @@
 
         <!-- Top Actions -->
         <div class="nav-actions">
+          <!-- Supabase Live Sync Status Pill -->
+          <button id="openSyncModalBtn" class="btn btn-sync-status" title="Supabase লাইভ ক্লাউড সিঙ্ক স্ট্যাটাস ও সেটআপ">
+            <span class="sync-dot sync-offline" id="globalSyncDot"></span>
+            <span id="globalSyncText">ক্লাউড: অফলাইন</span>
+          </button>
+
           <button id="openScriptBtn" class="btn btn-guide" title="কলিং স্ক্রিপ্ট ও কথা বলার গাইড দেখুন">
             📖 কলিং স্ক্রিপ্ট ও গাইড
           </button>
@@ -389,10 +397,67 @@
           </div>
         </div>
       </div>
+    <!-- Supabase Cloud Sync Setup Modal -->
+    <div id="cloudSyncModal" class="modal-overlay hidden">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-box">
+            <span class="modal-icon">⚡</span>
+            <div>
+              <h3>Supabase লাইভ ক্লাউড সিঙ্ক</h3>
+              <p class="modal-subtitle">সকল কলার ও ম্যানেজারের মাঝে রিয়েল-টাইম ডাটা সিঙ্ক্রোনাইজেশন</p>
+            </div>
+          </div>
+          <button id="closeSyncModalBtn" class="modal-close-btn">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="sync-status-card" id="syncStatusCard">
+            <span class="status-indicator-dot sync-offline" id="statusIndicatorDot"></span>
+            <div id="syncStatusDetails">
+              <div><strong>বর্তমান সংযোগ স্ট্যাটাস:</strong> <span id="syncStatusState">অফলাইন (লোকাল স্টোরেজ)</span></div>
+              <p id="syncStatusSubtext" class="text-sm text-muted mt-1">ক্লাউড ডাটাবেজ কানেক্ট করা হলে ৩ জন কলারের কল হিস্ট্রি ও স্ট্যাটাস রিয়েল-টাইমে একে অপরের স্ক্রিনে সিঙ্ক হবে।</p>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="sbUrlInput" class="form-label">🌐 Supabase Project URL:</label>
+            <input type="url" id="sbUrlInput" class="form-input" placeholder="https://xxxxxxxxxxxxxxxx.supabase.co" />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="sbKeyInput" class="form-label">🔑 Supabase Anon / Public API Key:</label>
+            <textarea id="sbKeyInput" class="form-textarea" rows="2" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."></textarea>
+          </div>
+
+          <div class="action-buttons-row mt-3">
+            <button id="saveConnectSyncBtn" class="btn btn-primary">⚡ কানেক্ট ও লাইভ সিঙ্ক চালু করুন</button>
+            <button id="disconnectSyncBtn" class="btn btn-subtle">বিচ্ছিন্ন করুন</button>
+          </div>
+
+          <hr class="modal-divider my-4" />
+
+          <div class="initial-sync-box">
+            <h4>🚀 প্রাথমিক ডাটা আপলোড (Initial Bulk Sync)</h4>
+            <p class="text-sm text-muted">আপনার Supabase প্রজেক্টে প্রথমবার সব ৮৫৯টি কোচিং সেন্টার ডাটাবেজে সংরক্ষণ করুন:</p>
+            <div class="action-buttons-row mt-2">
+              <button id="bulkUploadBtn" class="btn btn-outline">⬆️ ৮৫৯টি সেন্টার ক্লাউডে আপলোড করুন</button>
+              <button id="copySqlSchemaBtn" class="btn btn-subtle">📋 SQL স্কিমা কপি করুন</button>
+            </div>
+            <div id="bulkSyncProgress" class="sync-progress-bar hidden mt-2">
+              <div class="progress-bar-fill" id="syncProgressFill" style="width: 0%"></div>
+              <span class="progress-text" id="syncProgressText">০% আপলোড সম্পন্ন...</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Live Sync Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
 
   </div>
 
-  <script type="module" src="./app.js"></script>
+  <script type="module" src="./app.js?v=supabase-sync-v1"></script>
 </body>
 </html>
