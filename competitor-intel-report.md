@@ -122,18 +122,18 @@
 
 ### Vector 4: The "Fraud Victim" Recovery Campaign
 - **Thousands of students have been burned by dalal brokers.**
-- **Your move:** Facebook posts: "Already paid ৳200,000 to an agency and got nothing? Come to Keystone. We will audit your file for FREE. If we can save it, you pay only ৳120,000. If we can't, you pay nothing."
-- **Why it works:** Recovers stranded revenue. Builds massive trust. Destroys competitors by name (carefully, legally).
+- **Your move:** Facebook posts: "Already paid ৳200,000 to an agency and got nothing? Come to Keystone. We provide an independent, forensic file audit (৳2,000 audit fee, credited against final service fee upon visa). Transparent milestone breakdown, zero hidden costs."
+- **Why it works:** Recovers stranded revenue. Builds massive trust. Positions Keystone as the honest auditor.
 
 ### Vector 5: The Alumni Network Hijack
-- **Every Bangladeshi student currently in Korea is a potential referrer.**
-- **Your move:** Find Bangladeshi student associations in Korean universities (Facebook groups). Offer current students ৳10,000 per successful referral. They know the exact students back home who want to come.
+- **Every Bangladeshi student currently in Korea or Europe is a potential referrer.**
+- **Your move:** Find Bangladeshi student associations in foreign universities (Facebook groups). Offer current students ৳10,000 per successful referral. They know the exact students back home who want to come.
 - **Why it works:** Peer-to-peer trust > agency trust. Always.
 
 ### Vector 6: The Document Audit Gambit
 - **Competitors submit files with errors.** Embassy rejects. Student loses 6 months.
-- **Your move:** "Bring your file from ANY agency. We will audit it for ৳2,000. If we find errors, we fix it. If we don't find errors, you get your ৳2,000 back."
-- **Why it works:** Steals competitors' customers at the last mile. Positions you as the quality gatekeeper.
+- **Your move:** "Bring your file from ANY agency. We will audit it for ৳2,000. If we find fatal errors, we help you rectify them before submission."
+- **Why it works:** Captures competitor leads at the final mile. Positions you as the quality gatekeeper.
 
 ---
 
@@ -153,39 +153,41 @@
 ### Tactic 2: The "Rate Your Agency" Poll
 - **Facebook post:** "We are conducting an anonymous survey. If you used an education consultancy in the last 2 years, rate them 1–5 stars. Comment below."
 - **What happens:** Students who were burned will vent. Students who were helped will praise. You collect intelligence AND engagement.
-- **Follow-up:** DM every 1-star reviewer. "Sorry you had a bad experience. Keystone offers a free file recovery consultation."
+- **Follow-up:** DM every 1-star reviewer. "Sorry you had a bad experience. Keystone provides professional file recovery and transparent visa reassessment."
 
 ### Tactic 3: The College Campus Infiltration
 - **Narsingdi has 27 colleges.** Every college has a "career club" or "English club."
-- **Your move:** Founder contacts college clubs. Offers a FREE 30-minute seminar: "How to Study in South Korea Without IELTS." No selling. Pure education. At the end: "If you want to know more, WhatsApp me."
+- **Your move:** Founder contacts college clubs. Offers a 30-minute workshop: "Study Abroad Roadmap: Navigating Admissions & Visas with Study Gaps." No hard selling. Pure education. At the end: "For direct eligibility assessment, message our official helpline."
 - **Why it works:** Students trust direct founder seminars, not ads. Perfect credibility.
 
 ### Tactic 4: The Facebook Group Domination
-- **Join every Bangladeshi student Facebook group:** "Study in Korea," "Korean Language Learning Bangladesh," "Narsingdi Students," "Gazipur Students," "HSC Result 2026," etc.
-- **Your move:** Don't sell. Answer questions. Be the most helpful person in the group. After 2 weeks of helpfulness, drop: "If anyone needs personalized guidance, I work with Keystone Education Consultancy in Narsingdi. First consultation is free."
+- **Join every Bangladeshi student Facebook group:** "Study in Korea," "Korean Language Learning Bangladesh," "Narsingdi Students," "Gazipur Students," "Study in Cyprus / Europe BD", "HSC Result 2026," etc.
+- **Your move:** Don't sell. Answer questions. Be the most helpful person in the group. After 2 weeks of helpfulness, drop: "If anyone needs personalized guidance, I work with Keystone Education Consultancy in Narsingdi. In-office appointments available."
 - **Why it works:** Community trust beats advertising. Every time.
 
-### Tactic 5: The Google Business Profile Hijack
+### Tactic 5: The Google Business Profile Dominance
 - **Claim/optimize Google Business Profiles for:**
   - Keystone Education Consultancy — Gazipur
   - Keystone Education Consultancy — Narsingdi
-  - Study in South Korea — Gazipur
-  - Study in South Korea — Narsingdi
-- **Why it works:** When parents search "study abroad consultancy near me" from Gazipur/Narsingdi, you appear first. FREE.
+  - Study in South Korea & Europe — Gazipur
+  - Study in South Korea & Europe — Narsingdi
+- **Why it works:** When parents search "study abroad consultancy near me" from Gazipur/Narsingdi, you appear first. High local intent.
 
 ### Tactic 6: The WhatsApp Status Broadcast
 - **Founder's routine:** Every morning, post one useful WhatsApp status:
-  - Monday: "Korea EAP program deadline this week"
+  - Monday: "Korea & Cyprus intake deadlines this week"
   - Tuesday: "Student success story: [Name] got visa to [University]"
-  - Wednesday: "Document checklist for Korea D-4 visa"
-  - Thursday: "Common mistake: bank statement errors that get you rejected"
-  - Friday: "Free seminar this Saturday at Narsingdi office"
+  - Wednesday: "Document checklist: Legalizing papers for study visa"
+  - Thursday: "Common mistake: fake bank solvency that triggers rejection"
+  - Friday: "Exclusive Admission & Visa Session this Saturday at Narsingdi office"
 - **Why it works:** 500+ contacts see it. Zero cost. High trust.
 
-### Tactic 7: The "No Visa No Fee" Amplification
-- **You already have this policy.** But you don't SCREAM it enough.
-- **Your move:** Every single piece of content must end with: "কোনো ভিসা, কোনো ফি। ভিসা না হলে এক টাকাও নেই।" (No visa, no fee. If no visa, not a single taka taken.)
-- **Why it works:** In a market where agencies take ৳100k upfront and disappear, this is nuclear.
+### Tactic 7: The "Zero Agency Fee Before Visa" Weapon
+- **The Policy:** 
+  1. Third-party government, ministry, and courier expenses are paid at actual cost against official receipts (৳15k–৳25k pass-through).
+  2. Keystone's professional service fee (৳100,000) is paid strictly AFTER the visa sticker is in the student's passport.
+- **Your move:** Every piece of marketing highlights: "ভিসা হওয়ার আগে কোনো সার্ভিস ফি নেই। থার্ড-পার্টি সরকারি খরচের বাইরে এক টাকাও এজেন্সি ফি নিই না — ভিসা হলে তবেই ফি।"
+- **Why it works:** Protects company cash from absorbing third-party fees, while obliterating competitors who pocket ৳200,000 upfront and vanish.
 
 ### Tactic 8: The Competitor Comparison Table (Careful Legal)
 - **Website page:** "How Keystone Compares"

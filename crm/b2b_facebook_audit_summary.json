@@ -1,0 +1,32 @@
+{
+  "audit_version": "2.0-conservative-public-metadata",
+  "total": 678,
+  "classification_counts": {
+    "ACTIVE_WITHIN_90_DAYS": 36,
+    "DORMANT": 6,
+    "NO_PAGE": 636
+  },
+  "active_within_90d": 36,
+  "dormant": 6,
+  "no_page": 636,
+  "facebook_urls_in_source": 54,
+  "verified_official_pages": 42,
+  "evidence_quality_counts": {
+    "HIGH": 624,
+    "LOW": 5,
+    "MEDIUM": 49
+  },
+  "evidence_reason_counts": {
+    "current_public_engagement_proxy": 36,
+    "facebook_url_returned_no_public_page_metadata": 5,
+    "no_facebook_url_in_source_record": 624,
+    "page_location_conflicts_with_center_district": 5,
+    "personal_profile_not_official_center_page": 2,
+    "verified_page_no_recent_public_activity_signal": 6
+  },
+  "cutoff_utc": "2026-07-04T20:13:18.818527+00:00",
+  "checked_at_utc": "2026-10-02T20:13:18.818527+00:00",
+  "cutoff_asia_dhaka": "2026-07-05T02:13:18.818527+06:00",
+  "checked_at_asia_dhaka": "2026-10-03T02:13:18.818527+06:00",
+  "methodology_note": "Public Facebook metadata only. A positive 'talking about this' count is a current engagement proxy, not a directly exposed post timestamp. NO_PAGE means no verifiable, name-matching official page was available from the source record; it is not proof that no Facebook presence exists anywhere."
+}

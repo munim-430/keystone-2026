@@ -2,7 +2,7 @@
 
 ## 1. Domain & Brand Invariants
 - **Brand Identity**: Strictly `Keystone Overseas`. The language training unit is `Keystone Language Academy` (or `Keystone Academy`). Never revert to legacy names.
-- **Physical Headquarters**: `House 7, Mirpur Road, Sobhanbag, Dhanmondi, Dhaka, Bangladesh`.
+- **Physical Headquarters**: `House - 5/4, Sobhanbag, Sobhanbag Road No. 16, Dhaka 1207, Bangladesh`.
 - **Contact Channels**: 
   - Phone/WhatsApp: `+880 1941 646278` / `01941-646278` (E.164: `+8801941646278`, clean WhatsApp: `8801941646278`).
   - Inbound Email: `munim.m247@gmail.com`. The old address `info@keystoneeducations.com` is deprecated and must never be referenced.

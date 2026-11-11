@@ -6,7 +6,7 @@
 ### PARTIES
 1. **First Party (Managing Consultancy):**  
    **Keystone Overseas**  
-   *Flagship Address:* House 7, Mirpur Road, Sobhanbag, Dhanmondi, Dhaka, Bangladesh  
+   *Flagship Address:* House - 5/4, Sobhanbag, Sobhanbag Road No. 16, Dhaka 1207, Bangladesh  
    *Direct Contact:* +880 1941 646278 | munim.m247@gmail.com  
    *Represented By:* Hasibul Munim (Founder & Managing Director)
 

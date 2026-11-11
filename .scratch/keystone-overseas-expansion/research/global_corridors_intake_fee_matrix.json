@@ -1,0 +1,234 @@
+{
+  "last_updated": "2026-10-01",
+  "corridors": {
+    "south_korea": {
+      "country": "South Korea",
+      "flag": "🇰🇷",
+      "currency": "KRW",
+      "visa_system": "VIC (사증발급인정서) via HiKorea",
+      "embassy_location": "4 Madani Avenue, Baridhara, Dhaka-1212",
+      "intakes": {
+        "spring": {
+          "commencement": "March",
+          "round_1_deadline": "September 30",
+          "round_2_deadline": "November 30",
+          "extended_late_deadline": "December 24"
+        },
+        "fall": {
+          "commencement": "September",
+          "round_1_deadline": "April 15",
+          "round_2_deadline": "June 15",
+          "extended_late_deadline": "July 20"
+        }
+      },
+      "institutions": [
+        {
+          "name": "Korea University",
+          "korean_name": "고려대학교",
+          "status": "우수인증대학",
+          "tuition_per_sem_krw": "4,800,000 - 5,800,000",
+          "tuition_per_sem_usd": "3,600 - 4,350",
+          "spring_deadline": "November 15",
+          "fall_deadline": "May 15"
+        },
+        {
+          "name": "Sungkyunkwan University (SKKU)",
+          "korean_name": "성균관대학교",
+          "status": "우수인증대학",
+          "tuition_per_sem_krw": "4,900,000 - 6,000,000",
+          "tuition_per_sem_usd": "3,700 - 4,500",
+          "spring_deadline": "November 20",
+          "fall_deadline": "May 20"
+        },
+        {
+          "name": "Hanyang University",
+          "korean_name": "한양대학교",
+          "status": "우수인증대학",
+          "tuition_per_sem_krw": "4,500,000 - 5,600,000",
+          "tuition_per_sem_usd": "3,400 - 4,200",
+          "spring_deadline": "November 10",
+          "fall_deadline": "May 10"
+        },
+        {
+          "name": "Chung-Ang University (CAU)",
+          "korean_name": "중앙대학교",
+          "status": "우수인증대학",
+          "tuition_per_sem_krw": "5,320,000 - 6,993,000",
+          "tuition_per_sem_usd": "4,000 - 5,250",
+          "spring_deadline": "December 24",
+          "fall_deadline": "June 25"
+        },
+        {
+          "name": "Pusan National University (PNU)",
+          "korean_name": "부산대학교",
+          "status": "Flagship National",
+          "tuition_per_sem_krw": "2,100,000 - 2,900,000",
+          "tuition_per_sem_usd": "1,580 - 2,180",
+          "spring_deadline": "November 15",
+          "fall_deadline": "May 15"
+        },
+        {
+          "name": "Kyungpook National University (KNU)",
+          "korean_name": "경북대학교",
+          "status": "Flagship National",
+          "tuition_per_sem_krw": "2,150,000 - 2,950,000",
+          "tuition_per_sem_usd": "1,620 - 2,220",
+          "spring_deadline": "November 25",
+          "fall_deadline": "May 25"
+        }
+      ]
+    },
+    "romania": {
+      "country": "Romania (EU)",
+      "flag": "🇷🇴",
+      "currency": "EUR",
+      "visa_system": "Type D/SD Student Visa (Scrisoare de Acceptare)",
+      "embassy_channels": "Alternative consular missions in Hanoi, Bangkok, Kuala Lumpur (bypassing India)",
+      "intakes": {
+        "fall": {
+          "commencement": "October",
+          "application_open": "April 1",
+          "application_close": "August 15",
+          "extended_ministry_window": "September 15"
+        }
+      },
+      "institutions": [
+        {
+          "name": "POLITEHNICA Bucharest (UNSTPB)",
+          "city": "Bucharest",
+          "preparatory_year_fee_eur": 2700,
+          "degree_fee_per_year_eur": "2,700 - 3,600",
+          "deadline": "August 10"
+        },
+        {
+          "name": "Technical University of Cluj-Napoca (UTCN)",
+          "city": "Cluj-Napoca",
+          "preparatory_year_fee_eur": 2430,
+          "degree_fee_per_year_eur": "2,700",
+          "deadline": "July 31"
+        },
+        {
+          "name": "Politehnica Timișoara (UPT)",
+          "city": "Timișoara",
+          "preparatory_year_fee_eur": 1980,
+          "degree_fee_per_year_eur": "2,400 - 3,000",
+          "deadline": "July 25"
+        },
+        {
+          "name": "University of Bucharest (UB)",
+          "city": "Bucharest",
+          "preparatory_year_fee_eur": 2400,
+          "degree_fee_per_year_eur": "2,600 - 3,400",
+          "deadline": "August 15"
+        },
+        {
+          "name": "Babeș-Bolyai University (UBB)",
+          "city": "Cluj-Napoca",
+          "preparatory_year_fee_eur": 3015,
+          "degree_fee_per_year_eur": "3,200 - 4,000",
+          "deadline": "July 15"
+        }
+      ]
+    },
+    "malaysia": {
+      "country": "Malaysia",
+      "flag": "🇲🇾",
+      "currency": "MYR",
+      "visa_system": "EMGS eVAL ➔ SEV Sticker at High Commission Dhaka",
+      "intakes": ["January/February", "April/May", "September/October"],
+      "institutions": [
+        {
+          "name": "Taylor's University",
+          "annual_tuition_usd": "7,000 - 9,500",
+          "intakes": ["March", "August"]
+        },
+        {
+          "name": "Sunway University",
+          "annual_tuition_usd": "6,500 - 8,500",
+          "intakes": ["January", "April", "September"]
+        },
+        {
+          "name": "Asia Pacific University (APU)",
+          "annual_tuition_usd": "5,000 - 6,800",
+          "intakes": ["February", "April", "July", "September", "November"]
+        },
+        {
+          "name": "Lincoln University College",
+          "annual_tuition_usd": "2,800 - 4,200",
+          "intakes": ["Monthly Rolling"]
+        },
+        {
+          "name": "University of Malaya (UM)",
+          "annual_tuition_usd": "3,500 - 5,000",
+          "intakes": ["March", "October"]
+        }
+      ]
+    },
+    "cyprus": {
+      "country": "Cyprus (EU)",
+      "flag": "🇨🇾",
+      "currency": "EUR",
+      "visa_system": "Direct CRMD Entry Permit (Blue Paper) with OKTB",
+      "intakes": ["September/October (Fall)", "February (Spring)"],
+      "institutions": [
+        {
+          "name": "University of Nicosia (UNIC)",
+          "net_annual_tuition_eur": "4,750 - 5,750",
+          "fall_deadline": "August 30",
+          "spring_deadline": "December 30"
+        },
+        {
+          "name": "European University Cyprus (EUC)",
+          "net_annual_tuition_eur": "4,600 - 5,500",
+          "fall_deadline": "August 30",
+          "spring_deadline": "December 30"
+        },
+        {
+          "name": "Frederick University",
+          "net_annual_tuition_eur": "3,900 - 4,600",
+          "fall_deadline": "August 15",
+          "spring_deadline": "December 15"
+        },
+        {
+          "name": "Cyprus International University (CIU)",
+          "net_annual_tuition_eur": "3,100 - 3,700",
+          "fall_deadline": "September 15",
+          "spring_deadline": "January 15"
+        }
+      ]
+    },
+    "hungary": {
+      "country": "Hungary (Schengen)",
+      "flag": "🇭🇺",
+      "currency": "EUR",
+      "visa_system": "VFS Global Dhaka (Gulshan Avenue) ➔ Schengen Type D",
+      "intakes": ["September (Fall)", "February (Spring)"],
+      "institutions": [
+        {
+          "name": "University of Debrecen",
+          "annual_tuition_usd": "6,000 - 8,000",
+          "fall_deadline": "June 15",
+          "spring_deadline": "November 15"
+        },
+        {
+          "name": "Budapest Metropolitan University (METU)",
+          "annual_tuition_eur": "6,600 - 8,500",
+          "fall_deadline": "June 30",
+          "spring_deadline": "November 30"
+        },
+        {
+          "name": "IBS International Business School",
+          "annual_tuition_eur": "8,000 - 9,600",
+          "fall_deadline": "June 30",
+          "spring_deadline": "November 30"
+        },
+        {
+          "name": "Duna College Budapest",
+          "annual_tuition_eur": "5,200",
+          "fall_deadline": "July 15",
+          "spring_deadline": "December 15"
+        }
+      ]
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,8 @@
   <meta name="description" content="District-based IELTS & Language Coaching Center B2B Outreach and Lead Tracking Platform for Keystone Education Consultancy.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./keystone_logo_official.png">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -16,23 +17,77 @@
     <header class="navbar">
       <div class="nav-container">
         <div class="brand">
-          <div class="logo-icon">⚡</div>
+          <img src="./keystone_logo_official.png" alt="Keystone Overseas" class="brand-logo" />
           <div class="brand-text">
             <h1>KEYSTONE <span>CRM</span></h1>
-            <p>B2B IELTS & Coaching Center Outreach</p>
+            <p>B2B ল্যাঙ্গুয়েজ ও কোচিং সেন্টার আউটরিচ</p>
           </div>
         </div>
 
+        <!-- Top Actions -->
         <div class="nav-actions">
-          <button id="resetBtn" class="btn btn-outline" title="Reset dataset to reload all 859 centers">
-            🔄 Load All 859 Centers
+          <button id="openScriptBtn" class="btn btn-guide" title="কলিং স্ক্রিপ্ট ও কথা বলার গাইড দেখুন">
+            📖 কলিং স্ক্রিপ্ট ও গাইড
           </button>
+
+          <!-- Mode Switcher -->
+          <div class="view-mode-toggle">
+            <button id="modeFocusBtn" class="mode-toggle-btn active" title="একবারে ১টি করে সেন্টার কল করার সহজ মোড">
+              🎯 ফোকাস মোড (১টি করে)
+            </button>
+            <button id="modeGridBtn" class="mode-toggle-btn" title="সব সেন্টার তালিকা আকারে দেখুন">
+              📋 গ্রিড ভিউ
+            </button>
+          </div>
+
           <button id="exportBtn" class="btn btn-outline" title="Export updated status & notes as JSON">
-            📥 Export Data
+            📥 ডেটা এক্সপোর্ট
+          </button>
+          <button id="resetBtn" class="btn btn-subtle" title="সব ডেটা পুনরায় লোড করুন">
+            🔄 রিলোড
           </button>
         </div>
       </div>
     </header>
+
+    <!-- Caller Hub Selection Bar (3 Female Telecallers) -->
+    <section class="caller-hub-section">
+      <div class="hub-container">
+        <div class="hub-header">
+          <span class="hub-title">👩‍💼 আপনার কলার হাব নির্বাচন করুন:</span>
+          <span class="hub-hint">আপনার নির্দিষ্ট হাবে ক্লিক করলে শুধু আপনার জন্য নির্ধারিত সেন্টারগুলো দেখা যাবে</span>
+        </div>
+        <div class="hub-tabs">
+          <button class="hub-btn active" data-hub="CALLER_1">
+            <span class="hub-avatar">👩‍💼</span>
+            <span class="hub-name">কলার ১: ইস্টার্ন হাব</span>
+            <span class="hub-count" id="hubCount1">২৮৮ সেন্টার</span>
+            <span class="hub-desc">সিলেট, কুমিল্লা, নোয়াখালী, ময়মনসিংহ</span>
+          </button>
+
+          <button class="hub-btn" data-hub="CALLER_2">
+            <span class="hub-avatar">👩‍💼</span>
+            <span class="hub-name">কলার ২: নর্দার্ন হাব</span>
+            <span class="hub-count" id="hubCount2">২৯০ সেন্টার</span>
+            <span class="hub-desc">রাজশাহী, বগুড়া, রংপুর, দিনাজপুর</span>
+          </button>
+
+          <button class="hub-btn" data-hub="CALLER_3">
+            <span class="hub-avatar">👩‍💼</span>
+            <span class="hub-name">কলার ৩: সাউদার্ন হাব</span>
+            <span class="hub-count" id="hubCount3">২৮১ সেন্টার</span>
+            <span class="hub-desc">খুলনা, বরিশাল, কুষ্টিয়া, যশোর, ফরিদপুর</span>
+          </button>
+
+          <button class="hub-btn hub-btn-all" data-hub="ALL">
+            <span class="hub-avatar">🌐</span>
+            <span class="hub-name">সব সেন্টার</span>
+            <span class="hub-count" id="hubCountAll">৮৫৯ সেন্টার</span>
+            <span class="hub-desc">সারাদেশের ৪৯টি জেলা</span>
+          </button>
+        </div>
+      </div>
+    </section>
 
     <!-- Main Container -->
     <main class="main-content">
@@ -43,7 +98,7 @@
           <div class="stat-icon icon-blue">🏢</div>
           <div class="stat-info">
             <span class="stat-value" id="statTotal">859</span>
-            <span class="stat-label">Total Centers</span>
+            <span class="stat-label">মোট সেন্টার (Total)</span>
           </div>
         </div>
 
@@ -51,7 +106,7 @@
           <div class="stat-icon icon-green">🔥</div>
           <div class="stat-info">
             <span class="stat-value" id="statEager">0</span>
-            <span class="stat-label">Eager / Hot</span>
+            <span class="stat-label">আগ্রহী / হট (Eager)</span>
           </div>
         </div>
 
@@ -59,7 +114,7 @@
           <div class="stat-icon icon-amber">📞</div>
           <div class="stat-info">
             <span class="stat-value" id="statFollowUp">0</span>
-            <span class="stat-label">Follow Up</span>
+            <span class="stat-label">ফলোআপ (Follow Up)</span>
           </div>
         </div>
 
@@ -67,7 +122,7 @@
           <div class="stat-icon icon-rose">❄️</div>
           <div class="stat-info">
             <span class="stat-value" id="statCold">0</span>
-            <span class="stat-label">Cold / Declined</span>
+            <span class="stat-label">আগ্রহ নেই (Cold)</span>
           </div>
         </div>
 
@@ -75,7 +130,7 @@
           <div class="stat-icon icon-purple">🤝</div>
           <div class="stat-info">
             <span class="stat-value" id="statPartnered">0</span>
-            <span class="stat-label">Partnered</span>
+            <span class="stat-label">পার্টনার (Partnered)</span>
           </div>
         </div>
 
@@ -83,97 +138,206 @@
           <div class="stat-icon icon-teal">🎓</div>
           <div class="stat-info">
             <span class="stat-value" id="statStudents">0</span>
-            <span class="stat-label">Total Students</span>
+            <span class="stat-label">মোট স্টুডেন্ট</span>
           </div>
         </div>
       </section>
 
-      <!-- District & Search Control Hub -->
-      <section class="control-hub">
-        <div class="control-row">
-          <!-- District Selector -->
-          <div class="control-group district-group">
-            <label for="districtSelect" class="control-label">📍 Select District (49 Districts Available)</label>
-            <div class="select-wrapper">
-              <select id="districtSelect" class="form-select district-select">
-                <option value="ALL">🌐 All Districts (859 Centers)</option>
-              </select>
+      <!-- ========================================== -->
+      <!-- VIEW 1: FOCUS MODE (১টি করে কল করার সহজ মোড) -->
+      <!-- ========================================== -->
+      <section id="focusModeSection" class="focus-mode-section">
+        <div class="focus-container">
+          
+          <!-- Focus Navigation & Progress Bar -->
+          <div class="focus-progress-header">
+            <div class="focus-progress-info">
+              <span class="focus-hub-badge" id="focusHubBadge">👩‍💼 কলার ১: ইস্টার্ন হাব</span>
+              <span class="focus-counter" id="focusCounterText">সেন্টার ১ / ২৮৮</span>
+            </div>
+            
+            <div class="focus-nav-arrows">
+              <button id="focusPrevBtn" class="btn btn-outline btn-sm">◀ আগের সেন্টার</button>
+              <button id="focusNextBtn" class="btn btn-primary btn-sm">পরের সেন্টার ▶</button>
             </div>
           </div>
 
-          <!-- Cards Per View Selector -->
-          <div class="control-group view-limit-group">
-            <label for="limitSelect" class="control-label">🎴 Display Cards Per Row / Page</label>
-            <div class="segmented-control">
-              <button class="limit-btn active" data-limit="5">5 Cards</button>
-              <button class="limit-btn" data-limit="10">10 Cards</button>
-              <button class="limit-btn" data-limit="20">20 Cards</button>
-              <button class="limit-btn" data-limit="999">Show All</button>
+          <div class="focus-progress-track">
+            <div id="focusProgressBar" class="focus-progress-fill" style="width: 1%;"></div>
+          </div>
+
+          <!-- The Main Easy Focus Card -->
+          <div id="focusCard" class="focus-card">
+            <!-- Dynamic Content rendered via JS -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- VIEW 2: GRID VIEW (গ্রিড ও টেবিল তালিকা)   -->
+      <!-- ========================================== -->
+      <section id="gridModeSection" class="grid-mode-section hidden">
+        <!-- District & Search Control Hub -->
+        <div class="control-hub">
+          <div class="control-row">
+            <!-- District Selector -->
+            <div class="control-group district-group">
+              <label for="districtSelect" class="control-label">📍 জেলা নির্বাচন করুন (৪৯টি জেলা)</label>
+              <div class="select-wrapper">
+                <select id="districtSelect" class="form-select district-select">
+                  <option value="ALL">🌐 সকল জেলা (All Districts)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Cards Per Page -->
+            <div class="control-group view-limit-group">
+              <label for="limitSelect" class="control-label">🎴 প্রতি পেজে প্রদর্শন</label>
+              <div class="segmented-control">
+                <button class="limit-btn active" data-limit="5">৫টি</button>
+                <button class="limit-btn" data-limit="10">১০টি</button>
+                <button class="limit-btn" data-limit="20">২০টি</button>
+                <button class="limit-btn" data-limit="999">সবগুলো</button>
+              </div>
+            </div>
+
+            <!-- Search Input -->
+            <div class="control-group search-group">
+              <label for="searchInput" class="control-label">🔍 সেন্টার নাম / ফোন নম্বর দিয়ে খুঁজুন</label>
+              <input type="text" id="searchInput" class="form-input" placeholder="কোচিং সেন্টারের নাম বা ফোন লিখুন...">
             </div>
           </div>
 
-          <!-- Search Input -->
-          <div class="control-group search-group">
-            <label for="searchInput" class="control-label">🔍 Quick Search Center / Phone</label>
-            <input type="text" id="searchInput" class="form-input" placeholder="Type center name, phone, or keyword...">
+          <!-- Quick District Pills -->
+          <div class="district-pills-bar">
+            <span class="pills-title">জনপ্রিয় জেলাসমূহ:</span>
+            <div id="quickDistricts" class="pills-container">
+              <!-- Dynamically populated -->
+            </div>
           </div>
         </div>
 
-        <!-- Quick District Pills -->
-        <div class="district-pills-bar">
-          <span class="pills-title">Popular Districts:</span>
-          <div id="quickDistricts" class="pills-container">
-            <!-- Dynamically populated -->
+        <!-- Status Filter Tabs & Pagination Header -->
+        <div class="filter-pagination-bar">
+          <div class="filter-tabs">
+            <button class="tab-btn active" data-status="ALL">সকল (<span id="countAll">0</span>)</button>
+            <button class="tab-btn tab-eager" data-status="Eager">🔥 আগ্রহী (<span id="countEager">0</span>)</button>
+            <button class="tab-btn tab-followup" data-status="FollowUp">📞 ফলোআপ (<span id="countFollowUp">0</span>)</button>
+            <button class="tab-btn tab-new" data-status="New">🆕 নতুন লিড (<span id="countNew">0</span>)</button>
+            <button class="tab-btn tab-cold" data-status="Cold">❄️ কোল্ড (<span id="countCold">0</span>)</button>
+            <button class="tab-btn tab-partnered" data-status="Partnered">🤝 পার্টনার (<span id="countPartnered">0</span>)</button>
+            <button class="tab-btn tab-today" data-status="TODAY">📅 আজ কল ব্যাক (<span id="countToday">0</span>)</button>
+            <button class="tab-btn tab-logged" data-status="LOGGED" style="color:var(--primary)">📝 কল রেকর্ডকৃত (<span id="countLogged">0</span>)</button>
+          </div>
+
+          <!-- Pagination Controls -->
+          <div id="paginationBox" class="pagination-box">
+            <span id="pageInfo" class="page-info">Showing 1 - 5 of 25</span>
+            <div class="pagination-buttons">
+              <button id="prevPageBtn" class="btn btn-sm btn-outline" disabled>◀ পূর্ববর্তী</button>
+              <button id="nextPageBtn" class="btn btn-sm btn-outline">পরবর্তী ▶</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coaching Center Cards Grid -->
+        <div class="cards-section">
+          <div id="cardsGrid" class="cards-grid">
+            <!-- Dynamic Center Cards Rendered Here -->
+          </div>
+
+          <!-- Bottom Mobile Pagination Bar -->
+          <div id="paginationBoxBottom" class="pagination-box pagination-bottom-bar">
+            <span id="pageInfoBottom" class="page-info">Showing 1 - 5 of 859</span>
+            <div class="pagination-buttons">
+              <button id="prevPageBtnBottom" class="btn btn-nav-mobile btn-outline" disabled>◀ আগের পেজ</button>
+              <button id="nextPageBtnBottom" class="btn btn-nav-mobile btn-primary">পরের পেজ ▶</button>
+            </div>
+          </div>
+
+          <!-- Empty State -->
+          <div id="emptyState" class="empty-state hidden">
+            <div class="empty-icon">🔍</div>
+            <h3>কোনো কোচিং সেন্টার পাওয়া যায়নি</h3>
+            <p>অন্য কোনো জেলা বা ফিল্টার সিলেক্ট করে পুনরায় চেষ্টা করুন।</p>
           </div>
         </div>
       </section>
 
-      <!-- Status Filter Tabs & Pagination Header -->
-      <section class="filter-pagination-bar">
-        <div class="filter-tabs">
-          <button class="tab-btn active" data-status="ALL">All (<span id="countAll">0</span>)</button>
-          <button class="tab-btn tab-eager" data-status="Eager">🔥 Eager (<span id="countEager">0</span>)</button>
-          <button class="tab-btn tab-followup" data-status="FollowUp">📞 Follow Up (<span id="countFollowUp">0</span>)</button>
-          <button class="tab-btn tab-new" data-status="New">🆕 New Lead (<span id="countNew">0</span>)</button>
-          <button class="tab-btn tab-cold" data-status="Cold">❄️ Cold (<span id="countCold">0</span>)</button>
-          <button class="tab-btn tab-partnered" data-status="Partnered">🤝 Partnered (<span id="countPartnered">0</span>)</button>
-          <button class="tab-btn tab-today" data-status="TODAY">📅 Callback Today (<span id="countToday">0</span>)</button>
-          <button class="tab-btn tab-logged" data-status="LOGGED" style="color:var(--primary)">📝 Logged Calls (<span id="countLogged">0</span>)</button>
-        </div>
-
-        <!-- Pagination Controls -->
-        <div id="paginationBox" class="pagination-box">
-          <span id="pageInfo" class="page-info">Showing 1 - 5 of 25</span>
-          <div class="pagination-buttons">
-            <button id="prevPageBtn" class="btn btn-sm btn-outline" disabled>◀ Prev</button>
-            <button id="nextPageBtn" class="btn btn-sm btn-outline">Next ▶</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Coaching Center Cards Grid -->
-      <section class="cards-section">
-        <div id="cardsGrid" class="cards-grid">
-          <!-- Dynamic Center Cards Rendered Here -->
-        </div>
-
-        <!-- Bottom Mobile Pagination Bar -->
-        <div id="paginationBoxBottom" class="pagination-box pagination-bottom-bar">
-          <span id="pageInfoBottom" class="page-info">Showing 1 - 5 of 859</span>
-          <div class="pagination-buttons">
-            <button id="prevPageBtnBottom" class="btn btn-nav-mobile btn-outline" disabled>◀ Prev Page</button>
-            <button id="nextPageBtnBottom" class="btn btn-nav-mobile btn-primary">Next Page ▶</button>
-          </div>
-        </div>
-
-        <!-- Empty State -->
-        <div id="emptyState" class="empty-state hidden">
-          <div class="empty-icon">🔍</div>
-          <h3>No Coaching Centers Found</h3>
-          <p>Try selecting a different district, changing the status filter, or searching another term.</p>
-        </div>
-      </section>
     </main>
+
+    <!-- ========================================== -->
+    <!-- SLIDE-IN CALL SCRIPT & OBJECTION DRAWER    -->
+    <!-- ========================================== -->
+    <div id="scriptDrawerOverlay" class="drawer-overlay hidden">
+      <div id="scriptDrawer" class="script-drawer">
+        <div class="drawer-header">
+          <div class="drawer-title">
+            <h3>📖 কলিং স্ক্রিপ্ট ও কথা বলার গাইডলাইন</h3>
+            <p>কিস্টোন এডুকেশন কনসালটেন্সি (গুলশান-১, ঢাকা)</p>
+          </div>
+          <button id="closeScriptBtn" class="close-drawer-btn">&times;</button>
+        </div>
+
+        <div class="drawer-body">
+          <!-- Step 1: Greeting -->
+          <div class="guide-card">
+            <div class="guide-tag">ধাপ ১: সালাম ও প্রাথমিক পরিচয়</div>
+            <h4>আসসালামু আলাইকুম, আমি কিস্টোন এডুকেশন থেকে কল করেছি</h4>
+            <div class="script-quote">
+              "আসসালামু আলাইকুম স্যার/ম্যাম। আমি ঢাকা গুলশান-১ থেকে কিস্টোন এডুকেশন কনসালটেন্সি থেকে বলছি। আপনার সাথে কি ১ মিনিট কথা বলা সম্ভব? আপনাদের কোচিং সেন্টারে কি স্পোকেন/IELTS বা কোরিয়ান ভাষা শেখানো হচ্ছে?"
+            </div>
+          </div>
+
+          <!-- Step 2: The Value Hook -->
+          <div class="guide-card highlight-card">
+            <div class="guide-tag">ধাপ ২: আমাদের অফার (পার্টনারশিপ সুবিধা)</div>
+            <h4>আমরা কী দিচ্ছি এবং সেন্টারের লাভ কী?</h4>
+            <ul class="guide-points">
+              <li><strong>🎯 সাউথ কোরিয়া স্কলারশিপ:</strong> IELTS ছাড়াই বা কম স্কোরে সরকারি ও টপ ইউনিভার্সিটিতে ফুল/হাফ স্কলারশিপ।</li>
+              <li><strong>💰 আকর্ষণীয় পার্টনার রিভিনিউ শেয়ার:</strong> আপনার রেফার করা স্টুডেন্টের ভিসা প্রসেসিং সফল হলে সেন্টার পাবে স্টুডেন্ট প্রতি আকর্ষণীয় কমিশন।</li>
+              <li><strong>🏢 সরাসরি ঢাকা সাপোর্ট:</strong> স্টুডেন্টদের ফাইল অ্যাসেসমেন্ট, অফার লেটার, ভিসা প্রসেসিং পুরোটা কিস্টোন হেড অফিস পরিচালনা করবে।</li>
+            </ul>
+          </div>
+
+          <!-- Step 3: Common Objections & Ready Replies -->
+          <div class="guide-card">
+            <div class="guide-tag">ধাপ ৩: সাধারণ প্রশ্ন ও তাৎক্ষণিক উত্তর (FAQ)</div>
+            
+            <div class="faq-item">
+              <span class="faq-q">❓ প্রশ্ন: "আমরা তো বিদেশে স্টুডেন্ট পাঠাই না, শুধু পড়াই।"</span>
+              <p class="faq-a">👉 <strong>উত্তর:</strong> "ঠিক এই কারণেই আমরা যোগাযোগ করেছি স্যার! আপনাদের স্টুডেন্টরা কোর্স শেষ করে বিদেশে যাওয়ার জন্য ভালো কনসালটেন্সি খোঁজে। আমরা অফিসিয়াল পার্টনার হিসেবে কাজ করলে আপনাদের বাড়তি কোনো কাজ ছাড়াই প্রতিটি স্টুডেন্ট থেকে সেন্টারের ভালো ইনকাম হবে।"</p>
+            </div>
+
+            <div class="faq-item">
+              <span class="faq-q">❓ প্রশ্ন: "আমাদের অলরেডি একটা এজেন্সির সাথে চুক্তি আছে।"</span>
+              <p class="faq-a">👉 <strong>উত্তর:</strong> "খুবই ভালো স্যার। তবে সাউথ কোরিয়া এবং নির্দিষ্ট কিছু কান্ট্রিতে আমাদের সরাসরি ইউনিভার্সিটি রিপ্রেজেন্টেশন আছে যাতে স্টুডেন্টদের ভিসার সাকসেস রেট সর্বোচ্চ। আপনি চাইলে আমাদের স্পেশাল প্রোগ্রামগুলো দেখতে পারেন।"</p>
+            </div>
+
+            <div class="faq-item">
+              <span class="faq-q">❓ প্রশ্ন: "এখন খুব ব্যস্ত, পরে কথা বলব।"</span>
+              <p class="faq-a">👉 <strong>উত্তর:</strong> "অবশ্যই স্যার, কোনো সমস্যা নেই। আমি কি আপনার এই নাম্বারে একটু হোয়াটসঅ্যাপে আমাদের প্রাতিষ্ঠানিক পার্টনারশিপ ডিটেইলস ও ব্রোশিউর পাঠিয়ে রাখব? কখন ফোন দিলে আপনার সুবিধা হবে?"</p>
+            </div>
+
+            <div class="faq-item">
+              <span class="faq-q">❓ প্রশ্ন: "মালিক/ডিরেক্টর এখন সেন্টারে নেই।"</span>
+              <p class="faq-a">👉 <strong>উত্তর:</strong> "আচ্ছা ম্যাম/স্যার, ডিরেক্টর স্যারের সাথে কোন সময় সরাসরি কথা বলা যাবে? অথবা উনার হোয়াটসঅ্যাপ নাম্বারটা কি একটু শেয়ার করা যাবে? আমি কিস্টোনের অফিশিয়াল প্রস্তাবনাটি পাঠিয়ে রাখব।"</p>
+            </div>
+          </div>
+
+          <!-- Step 4: Quick Checklist -->
+          <div class="guide-card">
+            <div class="guide-tag">ধাপ ৪: যে তথ্যগুলো সংগ্রহ করতে হবে</div>
+            <ul class="checklist">
+              <li>✅ সেন্টারে মাসে বা ব্যাচে আনুমানিক কতজন স্টুডেন্ট থাকে?</li>
+              <li>✅ মূল ডিরেক্টর বা সিদ্ধান্ত গ্রহণকারী ব্যক্তির নাম ও হোয়াটসঅ্যাপ নাম্বার।</li>
+              <li>✅ কোন দেশে যাওয়ার আগ্রহ তাদের স্টুডেন্টদের বেশি (কোরিয়া / ইউকে / কানাডা / জাপান)?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Modal for Note History & Editing -->
     <div id="noteModal" class="modal-overlay hidden">
@@ -184,28 +348,41 @@
         </div>
         <div class="modal-body">
           <div class="center-meta-info">
-            <p><strong>District:</strong> <span id="modalDistrict">--</span></p>
-            <p><strong>Phone:</strong> <span id="modalPhone">--</span></p>
-            <p><strong>Status:</strong> <span id="modalStatusBadge" class="badge">--</span></p>
+            <p><strong>জেলা:</strong> <span id="modalDistrict">--</span></p>
+            <p><strong>ফোন নম্বর:</strong> <span id="modalPhone">--</span></p>
+            <p><strong>স্ট্যাটাস:</strong> <span id="modalStatusBadge" class="badge">--</span></p>
+          </div>
+
+          <!-- Quick Note Chips inside Modal -->
+          <div class="quick-chips-wrapper mb-3">
+            <span class="quick-chips-label">⚡ দ্রুত নোট চিপস (১-ক্লিক):</span>
+            <div class="quick-chips-container">
+              <button class="chip-btn" data-text="হোয়াটসঅ্যাপে বিস্তারিত অফার ও ব্রোশিউর পাঠানো হয়েছে।">💬 হোয়াটসঅ্যাপে পাঠালাম</button>
+              <button class="chip-btn" data-text="ব্যস্ত ছিলেন, বিকেলে কল করার অনুরোধ জানিয়েছেন।">⏰ বিকেলে কল</button>
+              <button class="chip-btn" data-text="কাল সকালে ডিরেক্টরের সাথে কথা বলতে বলেছেন।">📅 কাল সকালে কল</button>
+              <button class="chip-btn" data-text="সাউথ কোরিয়া ও ইউকে স্টুডেন্ট আছে, পার্টনারশিপে আগ্রহী।">🎓 স্টুডেন্ট আছে আগ্রহী</button>
+              <button class="chip-btn" data-text="মালিকের সাথে কথা বলতে হবে, স্টাফ রিসিভ করেছেন।">👔 মালিকের সাথে কথা হবে</button>
+              <button class="chip-btn" data-text="নম্বর বন্ধ বা রিং হয়নি।">❌ নম্বর বন্ধ/রিং হয়নি</button>
+            </div>
           </div>
 
           <div class="add-note-form">
-            <label for="modalNoteInput" class="form-label">✍️ Add Call Log / Agency Response:</label>
-            <textarea id="modalNoteInput" class="form-textarea" rows="3" placeholder="Enter what the agency responded, student availability, fee requirements, etc..."></textarea>
+            <label for="modalNoteInput" class="form-label">✍️ কল নোট বা এজেন্সির প্রতিক্রিয়া লিখুন:</label>
+            <textarea id="modalNoteInput" class="form-textarea" rows="3" placeholder="কথা বলে কী জানতে পারলেন? স্টুডেন্ট সংখ্যা, আগ্রহ, ডিরেক্টরের মতামত ইত্যাদি লিখুন..."></textarea>
             
             <div class="form-row mt-2">
               <div class="col">
-                <label for="modalFollowUpDate" class="form-label">Set Next Callback Date (Optional):</label>
+                <label for="modalFollowUpDate" class="form-label">📅 পরবর্তী কলের তারিখ (Follow-up Date):</label>
                 <input type="date" id="modalFollowUpDate" class="form-input">
               </div>
               <div class="col col-auto flex-end">
-                <button id="saveNoteBtn" class="btn btn-primary">💾 Save Call Log</button>
+                <button id="saveNoteBtn" class="btn btn-primary">💾 নোট সেভ করুন</button>
               </div>
             </div>
           </div>
 
           <div class="logs-history mt-4">
-            <h4>📜 Call History & Notes</h4>
+            <h4>📜 পূর্ববর্তী কল লগ ও নোট ইতিহাস</h4>
             <div id="logsList" class="logs-list">
               <!-- Logs populated here -->
             </div>

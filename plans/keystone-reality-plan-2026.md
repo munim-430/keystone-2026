@@ -26,10 +26,10 @@ You said: *"I want to focus on every corridor. Every foreign nation. That's why 
 **The phased truth:**
 | Phase | Corridor | Why | When |
 |---|---|---|---|
-| **0 (Now)** | **Korea ONLY** | Your only moat. Your only story. Your only profit. | Aug–Dec 2026 |
-| **1 (Month 4)** | Korea + Malaysia | Similar Asian corridor. Adventus unlocks this. Minimal new learning. | Jan 2027 |
-| **2 (Month 8)** | Korea + Malaysia + Canada (passive) | ApplyBoard handles Canada passively. Only when student asks. No marketing spend. | May 2027 |
-| **3 (Year 2)** | Full multi-corridor | Korea profits fund expansion. Hire corridor specialists. | 2028+ |
+| **0 (Now)** | **Korea Flagship + Cyprus Safety Net** | Korea is your premium moat. Cyprus (South & North) immediately monetizes leads with study gaps & no IELTS who fail Korea's $10k bank test. No India trip required. | Sep–Dec 2026 |
+| **1 (Month 4)** | Korea + Cyprus + Romania | Expand to Romania via eVisa for students seeking full EU status. Adventus/ApplyBoard unlocks this. | Jan 2027 |
+| **2 (Month 8)** | Korea + Cyprus + Malaysia + Canada (passive) | Passive intake via ApplyBoard for Western corridors. Only when student asks. | May 2027 |
+| **3 (Year 2)** | Full multi-corridor | Korea & Cyprus profits fund physical expansion & corridor specialists. | 2028+ |
 
 **You do NOT get to skip Phase 0.**
 

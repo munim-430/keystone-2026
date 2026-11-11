@@ -64,20 +64,20 @@ Reuse the existing scripts and the 7-day WhatsApp rotation — **upgrade, don't 
 |---|---|---|---|---|
 | **Facebook groups** | "Help first, sell second." Answer real questions in Narsingdi/Gazipur/HSC/IELTS/Korea groups; never spam. First 3 days read-only per group. | 5 helpful comments/day | Founder (human — no auto-posting into groups; ban risk) | Leads captured → Chatwoot/CRM manually; **no group scraping** |
 | **Facebook Page** | Value posts (tips, proof, whistleblower series) | 1/day (3 "hero" + 4 repurposed) | `fb_poster.py` after tokens set | **Postiz** schedules; FastSD CPU images |
-| **WhatsApp status** | 7-day rotation (Mon intake → Tue bank tip → Wed IELTS → Thu mistake → Fri success → Sat "in Narsingdi Bazar today, free counselling" → Sun off) | daily 9–10 AM | Founder | pre-built in content table |
+| **WhatsApp status** | 7-day rotation (Mon intake → Tue bank tip → Wed IELTS → Thu mistake → Fri success → Sat "in Narsingdi Bazar today, in-person consultation" → Sun off) | daily 9–10 AM | Founder | pre-built in content table |
 | **WhatsApp 1:1** | Qualify + nurture leads | on inbound + day0/2/5/7 | WhatsApp bot | **Evolution API + n8n** |
 | **YouTube/Reels** | 1 long counselling video → many shorts | 1 long + 3 shorts/week | Founder voice | **OpenShorts + faster-whisper (Bangla)** |
-| **College seminars** | "Trojan Horse" 30-min: "How to Study in Korea Without Breaking the Bank" | 1–2/week (27 Narsingdi colleges) | Founder + campus reps (৳2k/attendee-lead, ৳10k/enrolled) | QR → Form → CRM |
+| **College seminars** | "Trojan Horse" 30-min: "How to Study in Korea or Europe Without Breaking the Bank" | 1–2/week (27 Narsingdi colleges) | Founder + campus reps (৳2k/attendee-lead, ৳10k/enrolled) | QR → Form → CRM |
 | **Referral program** | ৳10k per referred *enrolled* student | always-on | every enrolled student + family | CRM referral field; n8n payout reminder |
 | **B2B IELTS centers** | ৳5–10k per referred enrolled student (see §6) | 15 calls/day | Founder | CRM 856+ dataset → CRM → n8n follow-up |
-| **Google Business + local SEO** | Own "study in Korea Narsingdi/Gazipur" | set-and-maintain | Founder | Screaming Frog MCP audit; Umami on site |
+| **Google Business + local SEO** | Own "study in Korea & Cyprus Narsingdi/Gazipur" | set-and-maintain | Founder | Screaming Frog MCP audit; Umami on site |
 | **Guerrilla/local** | 50 posters, 200 bus/rickshaw stickers, coaching-center mithai visits, shopkeeper info-hubs | launch bursts | Founder | none (offline) — track source in CRM |
 
 ---
 
 ## 4. Content engine — "1 long asset → many posts"
 
-**Weekly rhythm:** Founder records **one 8–12 min counselling video** (e.g. "কোরিয়ায় IELTS ছাড়া ভর্তি — সম্পূর্ণ গাইড"). That single asset feeds the week.
+**Weekly rhythm:** Founder records **one 8–12 min counselling video** (e.g. "কোরিয়া ও সাইপ্রাসে IELTS ছাড়া ভর্তি — সম্পূর্ণ গাইড"). That single asset feeds the week.
 
 **n8n workflow — `content-repurpose`:**
 ```
@@ -94,11 +94,11 @@ Reuse the existing scripts and the 7-day WhatsApp rotation — **upgrade, don't 
 
 **Whistleblower content pillars (rotate; this IS the brand):**
 1. **"5 Questions Every Student Must Ask Their Agency"** — carousel + Reel (registered? partnership agreement? total cost? what if visa rejected? talk to a past student?). Cite Financial Express; name no competitor.
-2. **"Rate Your Agency" poll** — anonymous; DM every 1-star reviewer a free file-recovery offer (the Recovery Play segment).
+2. **"Rate Your Agency" poll** — anonymous; DM every 1-star reviewer a professional file-recovery review (the Recovery Play segment).
 3. **"এই ৫টি জিনিস যাচাই করুন — যেকোনো এজেন্সিতে"** poster — office + FB.
-4. **Per-enrolment proof post** — admit letter + that university's IEQAS entry screenshot ("verify it yourself").
+4. **Per-enrolment proof post** — admit letter + verification screenshot ("verify it yourself").
 5. **"Why Keystone is cheaper (not a scam)"** — the out-economics explainer (no Dhaka rent / automation / fee-after-visa / local business).
-6. **"Without IELTS"** — EAP/KLP pathway explainer (highest-intent student hook).
+6. **"Without IELTS & Study Gap"** — Korea EAP & Cyprus Diploma/Bachelor pathways (highest-intent student hook).
 
 ---
 

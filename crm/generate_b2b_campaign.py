@@ -31,7 +31,7 @@ WHATSAPP_TEMPLATE = """আসসালামু আলাইকুম স্য�
 • ফ্রি ইউরোপিয়ান ক্যারিয়ার সেমিনার আপনার সেন্টারে
 
 আমাদের অফিশিয়াল ওয়েবসাইট: https://www.keystoneeducations.com
-অফিস: House 7, Mirpur Road, Sobhanbag, Dhanmondi, Dhaka.
+অফিস: House - 5/4, Sobhanbag, Sobhanbag Road No. 16, Dhaka 1207.
 
 বিস্তারিত আলোচনার জন্য আপনার সুবিধাজনক সময়ে জানাবেন স্যার। ধন্যবাদ!
 — হাসিবুল মুনিম (01941-646278)"""
