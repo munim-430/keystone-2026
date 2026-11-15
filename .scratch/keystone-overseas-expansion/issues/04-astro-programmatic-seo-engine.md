@@ -11,8 +11,8 @@ How should the live production website (`keystone-website_main` deployed at `htt
 ## Resolution
 1. **Complete Brand & Identity Overhaul**:
    - Rebranded public brand to **Keystone Overseas** (Global Education & Academy).
-   - Flagship address updated to `House - 5/4, Sobhanbag, Sobhanbag Road No. 16, Dhaka 1207, Bangladesh` with local geo-coordinates (`23.7533, 90.3769`).
-   - Active contact email updated across all touchpoints to `munim.m247@gmail.com`.
+   - Flagship address updated to `Officer's Quarter Gate [Back to Daffodil Polytechnic Institute & Bhuiyan Academy, Dadu Villa: House - 5/4, Sobhanbag, Dhaka 1207, Bangladesh` with local geo-coordinates (`23.7533, 90.3769`).
+   - Active contact email updated across all touchpoints to `munim@keystoneoverseasbd.com`.
    - Contact & WhatsApp line unified to `+880 1941 646278` (`01941-646278`).
    - Completely purged all traces of the Gazipur office from history, team bios, stats, and footer.
    - Strictly removed all public mentions of agency fees, file opening fees, and flat rates. Only foreign university tuition fees and statutory embassy fees remain visible.
@@ -25,8 +25,8 @@ How should the live production website (`keystone-website_main` deployed at `htt
    - **South Korea**: Founder insider guidance (9 years in Korea) and GKS scholarship preparation.
    - **Canada**: High-academic degree pathways and PGWP work permits.
 
-3. **Keystone Language Academy Section**:
-   - Injected dedicated **Keystone Language Academy** section on `Home.tsx` and in `Services.tsx` promoting physical Dhanmondi batches:
+3. **Keystone Academy Section**:
+   - Injected dedicated **Keystone Academy** section on `Home.tsx` and in `Services.tsx` promoting physical Dhanmondi batches:
      - IELTS 6.5 Fast-Track (4–8 Week Intensive, small batches, daily speaking clinics).
      - European Prep & Consular Masterclass (Zero-IELTS visa interview coaching, Romanian basics, SOP clinic).
      - Korean Language & GKS Masterclass (Hangul fluency, TOPIK 1–2, D-2/D-4 interview drills).

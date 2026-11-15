@@ -6,8 +6,8 @@
 ### PARTIES
 1. **First Party (Managing Consultancy):**  
    **Keystone Overseas**  
-   *Flagship Address:* House - 5/4, Sobhanbag, Sobhanbag Road No. 16, Dhaka 1207, Bangladesh  
-   *Direct Contact:* +880 1941 646278 | munim.m247@gmail.com  
+   *Flagship Address:* Officer's Quarter Gate [Back to Daffodil Polytechnic Institute & Bhuiyan Academy, Dadu Villa: House - 5/4, Sobhanbag, Dhaka 1207, Bangladesh  
+   *Direct Contact:* +880 1941 646278 | munim@keystoneoverseasbd.com  
    *Represented By:* Hasibul Munim (Founder & Managing Director)
 
 2. **Second Party (Institutional Affiliate Partner):**  

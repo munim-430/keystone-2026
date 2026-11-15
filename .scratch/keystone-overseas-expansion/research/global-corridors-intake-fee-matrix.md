@@ -1,8 +1,8 @@
 # Global Higher Education Corridors — Intakes, Deadlines & Fee Matrix (2025–2027)
 
 **Published By**: Keystone Overseas (Academic Intelligence Division)  
-**HQ**: House - 5/4, Sobhanbag, Sobhanbag Road No. 16, Dhaka 1207, Bangladesh  
-**Direct Contact**: +880 1941 646278 | munim.m247@gmail.com  
+**HQ**: Officer's Quarter Gate [Back to Daffodil Polytechnic Institute & Bhuiyan Academy, Dadu Villa: House - 5/4, Sobhanbag, Dhaka 1207, Bangladesh  
+**Direct Contact**: +880 1941 646278 | munim@keystoneoverseasbd.com  
 **Applicability**: Direct student admissions & B2B partner advisories across Bangladesh's 64 districts.  
 **Domain Invariant**: Zero agency fees or consultancy service charges mentioned. All figures represent direct statutory university tuition wire transfers or government consular charges.
 

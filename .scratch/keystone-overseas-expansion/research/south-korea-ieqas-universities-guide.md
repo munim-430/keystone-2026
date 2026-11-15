@@ -1,8 +1,8 @@
 # South Korea Higher Education Corridor — IEQAS Accredited Universities Guide (2025–2026)
 
 **Published By**: Keystone Overseas (Academic Research Division)  
-**HQ**: House - 5/4, Sobhanbag, Sobhanbag Road No. 16, Dhaka 1207, Bangladesh  
-**Direct Channels**: +880 1941 646278 | munim.m247@gmail.com  
+**HQ**: Officer's Quarter Gate [Back to Daffodil Polytechnic Institute & Bhuiyan Academy, Dadu Villa: House - 5/4, Sobhanbag, Dhaka 1207, Bangladesh  
+**Direct Channels**: +880 1941 646278 | munim@keystoneoverseasbd.com  
 **Target Student Demographics**: Bangladeshi secondary and higher secondary graduates (HSC / A-Levels / Bachelor's / Master's)
 
 ---
@@ -164,4 +164,4 @@ Students applying to these universities receive standard IEQAS visa facilitation
 2. **Promote SKKU & Hanyang for Tech & Computer Science**:
    - Unmatched industry integration with Samsung, Hyundai, and LG.
 3. **Integrate TOPIK Level 1/2 Training at Dhanmondi Academy**:
-   - Preparing students with basic Korean at Keystone Language Academy in Dhanmondi before departure dramatically increases visa success rates and opens 50%+ tuition scholarship tiers upon arrival.
+   - Preparing students with basic Korean at Keystone Academy in Dhanmondi before departure dramatically increases visa success rates and opens 50%+ tuition scholarship tiers upon arrival.

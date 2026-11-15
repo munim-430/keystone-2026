@@ -1,11 +1,11 @@
 # Keystone Overseas — Agent Guardrails & Domain Invariants
 
 ## 1. Domain & Brand Invariants
-- **Brand Identity**: Strictly `Keystone Overseas`. The language training unit is `Keystone Language Academy` (or `Keystone Academy`). Never revert to legacy names.
-- **Physical Headquarters**: `House - 5/4, Sobhanbag, Sobhanbag Road No. 16, Dhaka 1207, Bangladesh`.
+- **Brand Identity**: Strictly `Keystone Overseas`. The education and language training wing is strictly `Keystone Academy`. Never revert to legacy names.
+- **Physical Headquarters**: `Officer's Quarter Gate [Back to Daffodil Polytechnic Institute & Bhuiyan Academy, Dadu Villa: House - 5/4, Sobhanbag, Dhaka 1207, Bangladesh`.
 - **Contact Channels**: 
   - Phone/WhatsApp: `+880 1941 646278` / `01941-646278` (E.164: `+8801941646278`, clean WhatsApp: `8801941646278`).
-  - Inbound Email: `munim.m247@gmail.com`. The old address `info@keystoneeducations.com` is deprecated and must never be referenced.
+  - Inbound Email: `munim@keystoneoverseasbd.com`. The old addresses `munim.m247@gmail.com` and `info@keystoneeducations.com` are deprecated and must never be referenced.
 - **Fee Confidentiality**: NEVER mention agency fees, consultancy service fees, file opening charges, or internal margins on any public webpage, meta tag, or schema. All customer-facing figures must represent direct university tuition bank wires or official statutory consular fees.
 - **Office Exclusivity**: Zero references to Gazipur as an office, branch, campus, or desk. Gazipur may only appear as a student geographic origin district (e.g. "from Gazipur", "32 km to Dhanmondi HQ").
 
