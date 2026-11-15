@@ -614,17 +614,25 @@ function renderFocusView() {
       <div class="focus-action-buttons">
         ${cleanPhone ? `
           <a href="tel:${cleanPhone}" class="btn-call-large" title="সরাসরি ফোন কল করুন">
-            <span>📞</span> <span>সরাসরি কল করুন</span>
+            <span>📞</span> <span>সরাসরি কল</span>
           </a>
           <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-large" title="হোয়াটসঅ্যাপে মেসেজ পাঠান">
-            <span>💬</span> <span>হোয়াটসঅ্যাপ মেসেজ</span>
+            <span>💬</span> <span>WhatsApp</span>
+          </a>
+          <a href="https://www.truecaller.com/search/bd/${cleanPhone.replace(/[^0-9]/g, '')}" target="_blank" rel="noopener noreferrer" class="btn-truecaller-large" title="Truecaller-এ ডিরেক্টরের নাম যাচাই করুন">
+            <span>👤</span> <span>Truecaller</span>
           </a>
         ` : `
           <span style="color:var(--accent); font-weight:700; padding:0.75rem;">ফোন নম্বর পাওয়া যায়নি</span>
         `}
         ${center.url ? `
-          <a href="${center.url}" target="_blank" rel="noopener noreferrer" class="btn-source-large" title="ফেসবুক পেজ বা গুগল ম্যাপ দেখুন">
-            <span>🔗</span> <span>ফেসবুক / ম্যাপ</span>
+          <a href="${center.url}" target="_blank" rel="noopener noreferrer" class="btn-source-large" title="${center.url.includes('facebook.com') ? 'ফেসবুক পেজ দেখুন' : 'গুগল ম্যাপ দেখুন'}">
+            <span>🔗</span> <span>${center.url.includes('facebook.com') ? 'ফেসবুক' : 'গুগল ম্যাপ'}</span>
+          </a>
+        ` : ''}
+        ${(!center.url || !center.url.includes('facebook.com')) ? `
+          <a href="https://www.facebook.com/search/pages/?q=${encodeURIComponent((center.name || '') + ' ' + (center.district || ''))}" target="_blank" rel="noopener noreferrer" class="btn-fb-search-large" title="ফেসবুকে অফিশিয়াল পেজ খুঁজুন">
+            <span>🔍</span> <span>FB Cross-Check</span>
           </a>
         ` : ''}
       </div>
@@ -920,10 +928,14 @@ function renderCenterCardHTML(center) {
       <!-- Quick Native Phone Dialer & WhatsApp -->
       <div class="action-buttons-row">
         ${cleanPhone ? `
-          <a href="tel:${cleanPhone}" class="btn-contact btn-call" title="Open Phone Dialer">📞 Call Dialer</a>
-          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn-contact btn-source" style="border-color:#25D366; color:#25D366" title="Send WhatsApp Message">💬 WhatsApp</a>
+          <a href="tel:${cleanPhone}" class="btn-contact btn-call" title="Open Phone Dialer">📞 Call</a>
+          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn-contact btn-source" style="border-color:#25D366; color:#25D366" title="Send WhatsApp Message">💬 WA</a>
+          <a href="https://www.truecaller.com/search/bd/${cleanPhone.replace(/[^0-9]/g, '')}" target="_blank" rel="noopener noreferrer" class="btn-contact btn-truecaller" title="Lookup Name on Truecaller">👤 Truecaller</a>
         ` : '<span class="no-phone-tag">No Phone Number</span>'}
-        ${center.url ? `<a href="${center.url}" target="_blank" rel="noopener noreferrer" class="btn-contact btn-source" title="Open Facebook / Maps">🔗 Link</a>` : ''}
+        ${center.url ? `<a href="${center.url}" target="_blank" rel="noopener noreferrer" class="btn-contact btn-source" title="Open Facebook / Maps">🔗 ${center.url.includes('facebook.com') ? 'FB' : 'Map'}</a>` : ''}
+        ${(!center.url || !center.url.includes('facebook.com')) ? `
+          <a href="https://www.facebook.com/search/pages/?q=${encodeURIComponent((center.name || '') + ' ' + (center.district || ''))}" target="_blank" rel="noopener noreferrer" class="btn-contact btn-fb" title="Cross-Check Facebook Page">🔍 FB</a>
+        ` : ''}
       </div>
 
       <!-- Agency Student Counter Control -->

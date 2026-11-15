@@ -24,6 +24,8 @@
       --amber-dark: #78350f;
       --rose: #ef4444;
       --rose-dark: #7f1d1d;
+      --fb-blue: #1877F2;
+      --tc-blue: #0084ff;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
@@ -140,14 +142,20 @@
       background: var(--card-border);
       color: #fff;
     }
-    .btn-switch {
-      background: #1e3a8a;
-      border: 1px solid #3b82f6;
-      color: #bfdbfe;
-    }
-    .btn-switch:hover {
-      background: #2563eb;
+    .btn-scripts {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%);
       color: #fff;
+      border: 1px solid #2dd4bf;
+    }
+    .btn-scripts:hover {
+      filter: brightness(1.15);
+    }
+    .btn-truecaller {
+      background: #0284c7;
+      color: #fff;
+    }
+    .btn-truecaller:hover {
+      background: #0369a1;
     }
 
     /* Container */
@@ -289,6 +297,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
+      flex-wrap: wrap;
     }
     .eager-note-box {
       background: rgba(245, 158, 11, 0.1);
@@ -301,13 +310,13 @@
     }
     .eager-actions {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       margin-top: 4px;
+      flex-wrap: wrap;
     }
     .btn-whatsapp {
       background: #25D366;
       color: #fff;
-      flex: 1;
       justify-content: center;
       font-weight: 700;
     }
@@ -372,6 +381,7 @@
       padding: 4px;
       border-radius: 8px;
       border: 1px solid var(--card-border);
+      flex-wrap: wrap;
     }
     .filter-tab {
       background: transparent;
@@ -426,14 +436,14 @@
       background: #0f172a;
       color: var(--text-muted);
       font-weight: 600;
-      padding: 12px 20px;
+      padding: 12px 18px;
       border-bottom: 1px solid var(--card-border);
       text-transform: uppercase;
       font-size: 11px;
       letter-spacing: 0.5px;
     }
     td {
-      padding: 14px 20px;
+      padding: 14px 18px;
       border-bottom: 1px solid var(--card-border);
       color: #cbd5e1;
       vertical-align: top;
@@ -455,6 +465,69 @@
     .badge-partnered { background: #4c1d95; color: #c4b5fd; border: 1px solid #7c3aed; }
     .badge-new { background: #1e293b; color: #94a3b8; }
 
+    /* Source / Verification Badges */
+    .badge-fb {
+      background: rgba(24, 119, 242, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(24, 119, 242, 0.4);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+    }
+    .badge-fb:hover { background: rgba(24, 119, 242, 0.3); }
+
+    .badge-maps {
+      background: rgba(234, 67, 53, 0.12);
+      color: #fca5a5;
+      border: 1px solid rgba(234, 67, 53, 0.3);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+    }
+    .btn-fb-search {
+      background: #1e293b;
+      color: #93c5fd;
+      border: 1px solid #3b82f6;
+      font-size: 10.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: 4px;
+    }
+    .btn-fb-search:hover { background: #1e3a8a; }
+
+    .btn-tc-lookup {
+      background: rgba(2, 132, 199, 0.15);
+      border: 1px solid #0284c7;
+      color: #38bdf8;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-tc-lookup:hover {
+      background: #0284c7;
+      color: #fff;
+    }
+
     .note-item {
       font-size: 12px;
       line-height: 1.4;
@@ -471,12 +544,12 @@
       font-weight: 500;
     }
 
-    /* Modal for Quick Proposal Copy */
+    /* Modal Overlay & Base */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(4px);
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(5px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -494,36 +567,78 @@
       border: 1px solid var(--card-border);
       border-radius: 14px;
       width: 90%;
-      max-width: 580px;
+      max-width: 680px;
       padding: 24px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
     }
     .modal-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 12px;
     }
-    .modal-header h3 { font-size: 16px; color: #fff; }
+    .modal-header h3 { font-size: 17px; color: #fff; font-weight: 700; }
     .close-btn {
       background: transparent;
       border: none;
       color: var(--text-dim);
-      font-size: 20px;
+      font-size: 24px;
       cursor: pointer;
+      line-height: 1;
     }
-    .proposal-preview-box {
+    .close-btn:hover { color: #fff; }
+
+    /* Script Tabs inside Modal */
+    .script-tabs {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 8px;
+      overflow-x: auto;
+    }
+    .script-tab-btn {
+      background: #0f172a;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .script-tab-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+    .script-body-box {
       background: #0f172a;
       border: 1px solid var(--card-border);
       border-radius: 8px;
-      padding: 14px;
+      padding: 16px;
       font-size: 13px;
-      line-height: 1.5;
-      color: #cbd5e1;
-      max-height: 280px;
+      line-height: 1.6;
+      color: #e2e8f0;
       overflow-y: auto;
-      margin-bottom: 16px;
+      flex: 1;
       white-space: pre-wrap;
+    }
+    .script-meta-tip {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 3px solid var(--emerald);
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #a7f3d0;
+      margin-bottom: 12px;
+      line-height: 1.4;
     }
   </style>
 </head>
@@ -541,13 +656,20 @@
         </div>
       </div>
       <div class="header-actions">
-        <a href="./index.html" class="btn btn-switch" title="টেলিকলার মোডে ফিরে যান">
+        <!-- Follow Up Calling Scripts Button -->
+        <button class="btn btn-scripts" onclick="openScriptsModal('proposal')">
+          📖 Follow-Up Scripts & Battlecards
+        </button>
+
+        <!-- Truecaller Setup Button -->
+        <button class="btn btn-truecaller" onclick="openTruecallerModal()">
+          👤 Truecaller API Key
+        </button>
+
+        <a href="./index.html" class="btn btn-outline" style="border-color:#334155;" title="টেলিকলার মোডে যান">
           👩‍💼 Telecaller CRM Hub
         </a>
-        <div class="file-pill">
-          <span class="pulse-dot"></span>
-          <span id="activeSourceLabel">Live Sync: 15 Nov Data</span>
-        </div>
+
         <label class="btn btn-outline" style="cursor:pointer">
           📁 Load Newer JSON
           <input type="file" id="jsonFileInput" accept=".json" style="display:none">
@@ -612,10 +734,10 @@
         <div>
           <h2>🔥 Priority Action Desk: 4 Centers Eager to Work With Us</h2>
           <p style="font-size:12.5px; color:var(--text-muted); margin-top:4px;">
-            These centers spoke with your telecallers today and asked for the business proposal and offer breakdown. Send them the proposal now:
+            These centers spoke with your telecallers today and asked for the proposal or brochure. Send proposal on WhatsApp or run a follow-up call:
           </p>
         </div>
-        <span class="priority-badge">Action Required: Send WhatsApp</span>
+        <span class="priority-badge">Action Required: Send WhatsApp / Follow-Up</span>
       </div>
 
       <div class="eager-cards-grid" id="eagerCardsGrid">
@@ -648,9 +770,14 @@
           <p>Note from employee: <em>"ব্যস্ত ছিলেন, বিকেলে কল করার অনুরোধ জানিয়েছেন।"</em> (Was in class/busy, explicitly requested an afternoon callback).</p>
         </div>
       </div>
-      <a href="tel:+8801714179491" class="btn btn-primary" style="background:#f59e0b; color:#000;">
-        📞 Call Project Headway
-      </a>
+      <div style="display:flex; gap:8px;">
+        <button class="btn btn-scripts" onclick="openScriptsModal('afternoon', 'Project Headway')">
+          📞 Afternoon Script
+        </button>
+        <a href="tel:+8801714179491" class="btn btn-primary" style="background:#f59e0b; color:#000;">
+          📞 Dial Now
+        </a>
+      </div>
     </div>
 
     <!-- Full Call Logs & Outcomes Table -->
@@ -675,10 +802,10 @@
           <thead>
             <tr>
               <th style="width: 140px;">Time / Status</th>
-              <th style="width: 260px;">Center Name & District</th>
-              <th style="width: 160px;">Phone Number</th>
+              <th style="width: 280px;">Center & Verification</th>
+              <th style="width: 170px;">Phone & Truecaller</th>
               <th>What They Said / Call History</th>
-              <th style="width: 140px; text-align:right;">Quick Action</th>
+              <th style="width: 160px; text-align:right;">Quick Actions</th>
             </tr>
           </thead>
           <tbody id="tableBody">
@@ -695,7 +822,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h3 id="modalCenterName">Send Proposal</h3>
-        <button class="close-btn" onclick="closeModal()">&times;</button>
+        <button class="close-btn" onclick="closeModal('proposalModal')">&times;</button>
       </div>
       <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px;">
         Pre-formatted proposal message for this director:
@@ -708,10 +835,160 @@
     </div>
   </div>
 
+  <!-- Follow-Up Calling Scripts Modal -->
+  <div class="modal-overlay" id="scriptsModal">
+    <div class="modal-content" style="max-width: 780px;">
+      <div class="modal-header">
+        <h3 id="scriptsModalTitle">📖 Follow-Up Calling Scripts & Battlecards</h3>
+        <button class="close-btn" onclick="closeModal('scriptsModal')">&times;</button>
+      </div>
+
+      <!-- Script Tabs -->
+      <div class="script-tabs">
+        <button class="script-tab-btn active" onclick="switchScriptTab('proposal')">48-Hr Proposal Follow-Up</button>
+        <button class="script-tab-btn" onclick="switchScriptTab('afternoon')">Afternoon / Busy Callback</button>
+        <button class="script-tab-btn" onclick="switchScriptTab('objections')">5 Objection Reframes</button>
+        <button class="script-tab-btn" onclick="switchScriptTab('bangla')">কথ্য মার্জিত বাংলা স্ক্রিপ্ট</button>
+        <button class="script-tab-btn" onclick="switchScriptTab('gatekeeper')">Gatekeeper / Receptionist</button>
+      </div>
+
+      <div class="script-meta-tip" id="scriptTip">
+        💡 <strong>Calling Mechanic:</strong> Speak 15% slower than normal conversation. Always use downward inflection at the end of sentences to project peer-level confidence.
+      </div>
+
+      <div class="script-body-box" id="scriptBody">
+        <!-- Rendered based on selected tab -->
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
+        <span style="font-size:11.5px; color:var(--text-dim);">Source: Keystone Consultant Playbook (SOP Compliant)</span>
+        <button class="btn btn-primary" onclick="copyActiveScript()">📋 Copy Script to Clipboard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Truecaller API Configuration Modal -->
+  <div class="modal-overlay" id="truecallerModal">
+    <div class="modal-content" style="max-width: 580px;">
+      <div class="modal-header">
+        <h3>👤 Truecaller Caller-ID Lookup Setup</h3>
+        <button class="close-btn" onclick="closeModal('truecallerModal')">&times;</button>
+      </div>
+      
+      <p style="font-size:13px; color:var(--text-muted); line-height:1.5; margin-bottom:14px;">
+        Truecaller identifies the real owner/director name behind unknown coaching center phone numbers before you dial.
+      </p>
+
+      <div style="background:#0f172a; border:1px solid var(--card-border); border-radius:8px; padding:14px; margin-bottom:16px;">
+        <h4 style="font-size:13px; color:#38bdf8; margin-bottom:6px;">Method 1: Instant 1-Click Search (Zero Setup)</h4>
+        <p style="font-size:12px; color:#cbd5e1; line-height:1.4;">
+          Click the <strong>"👤 Truecaller"</strong> button next to any phone number in the table below to immediately open Truecaller web search and view the verified caller name.
+        </p>
+      </div>
+
+      <div style="background:#0f172a; border:1px solid var(--card-border); border-radius:8px; padding:14px; margin-bottom:16px;">
+        <h4 style="font-size:13px; color:#34d399; margin-bottom:6px;">Method 2: Truecaller API Token / Installation ID (Optional)</h4>
+        <p style="font-size:12px; color:#cbd5e1; line-height:1.4; margin-bottom:8px;">
+          If you have a Truecaller Installation ID (generated via <code>truecallerpy login</code>) or RapidAPI key, paste it here to enable automated in-page name resolution:
+        </p>
+        <input type="text" id="tcApiKeyInput" placeholder="Enter Truecaller Installation ID / API Token..." style="width:100%; padding:9px 12px; background:#1e293b; border:1px solid #334155; border-radius:6px; color:#fff; font-size:12.5px; outline:none;">
+      </div>
+
+      <div style="display:flex; justify-content:flex-end; gap:8px;">
+        <button class="btn btn-outline" onclick="closeModal('truecallerModal')">Cancel</button>
+        <button class="btn btn-primary" onclick="saveTruecallerKey()">Save Key on Device</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     let crmData = [];
     let currentFilter = 'TODAY';
     let searchQuery = '';
+    let activeScriptKey = 'proposal';
+    let targetCenterName = '[Center Name]';
+
+    // Script Repository
+    const SCRIPTS = {
+      proposal: {
+        title: "48-Hour Proposal Follow-Up Call (After WhatsApp Dispatch)",
+        tip: "💡 The 2-Second Rule: When you ask if they reviewed the numbers, immediately bite your lip for 2 full seconds. The person who speaks first gives away control.",
+        text: (center) => `"Hello [Director Name], this is Munim with Keystone Overseas.
+
+I sent over our 1-page revenue-share breakdown to your WhatsApp yesterday showing the 1,000 and 9,000 Taka payout for your current IELTS batch at ${center}. 
+
+Did you have two minutes to look over the numbers, or did I catch you in the middle of a class?"
+
+*(Stop talking. Wait for 2 full seconds.)*
+
+- If they reviewed it:
+  "Great. Let's do a 10-minute sit-down this Thursday at your center or over Zoom so we can see which universities match your upcoming batch. Does 11:30 AM work for your schedule?"
+
+- If they have not seen it yet:
+  "Totally understand, you have classes running. Take a quick look at points 1 and 2 on WhatsApp tonight. I will call you Friday morning at 11:00 AM to see if the timeline aligns. Fair enough?"`
+      },
+      afternoon: {
+        title: "Afternoon Callback Script (Busy Morning Lead)",
+        tip: "💡 Pattern Interrupt: Acknowledge that they were in class in the morning. This separates you from aggressive telemarketers who call repeatedly without listening.",
+        text: (center) => `"Hello [Director Name], this is Munim from Keystone Overseas calling you back as promised.
+
+We spoke briefly this morning and you mentioned you were in class and asked to connect this afternoon. Did I catch you with 2 free minutes now?"
+
+*(Pause for their answer)*
+
+"The reason I called back is simple: we built a direct revenue-share model with language centers where you earn 1,000 Taka when we apply for your student, and 9,000 Taka upon visa approval, with zero paperwork for your teaching staff.
+
+Are you open to a quick 10-minute chat this Thursday to see what the numbers look like for your current batch?"`
+      },
+      objections: {
+        title: "5 Instant Objection Reframes (The Battlecard)",
+        tip: "💡 Validate -> Reframe -> Low-friction redirect. Never argue with a director. Agree with their premise first.",
+        text: () => `OBJECTION 1: "We already have an agency partner."
+Reframe: "That makes total sense, most reputable institutes do. We certainly do not expect you to drop them. But most centers keep a backup partner for specific countries or fast offer turnarounds. Where do your students face the longest visa delays right now?"
+
+OBJECTION 2: "We process admissions in-house."
+Reframe: "That is impressive, very few academies manage full visa compliance. How many hours do your instructors spend chasing embassy updates instead of teaching? Our partners keep their teachers 100% focused on test scores and outsource only the complex visa files to us."
+
+OBJECTION 3: "Just send an email to our info address."
+Reframe: "I can do that, but info inboxes are packed with student queries. What is your direct WhatsApp? I will send a 3-bullet summary. If the numbers make sense, let's talk for 5 minutes on Friday. Fair enough?"
+
+OBJECTION 4: "Are you charging the student any service fee?"
+Reframe: "Zero. 100% free counseling for partner candidates. We earn directly from international university commissions, which is what we share back with your center."
+
+OBJECTION 5: "I am waiting for IELTS scores before applying." (Student)
+Reframe: "If you wait for scores, intake deadlines and scholarships close. We get you a conditional university offer right now so your seat is locked while you finish exam prep. Fair enough?"`
+      },
+      bangla: {
+        title: "কথ্য মার্জিত বাংলা স্ক্রিপ্ট (Dhaka Professional)",
+        tip: "💡 মার্জিত কথ্য বাংলা: কোনো কৃত্রিম সাধু ভাষা নয়। স্বাভাবিক আত্মবিশ্বাসী ব্যবসায়িক টোনে কথা বলুন।",
+        text: (center) => `[ওপেনার ও পারমিশন]
+"আসসালামু আলাইকুম [ডিরেক্টরের নাম] ভাই/স্যার, আমি কিস্টোন ওভারসিজ থেকে মুনিম বলছিলাম। কাজের সময়ে আপনাকে কল দিয়েছি, তাই একদম সংক্ষেপে বলছি। আপনার কি ৪৫ সেকেন্ড সময় হবে, নাকি আপনি ক্লাসের মধ্যে আছেন?"
+
+*(২ সেকেন্ড বিরতি দিন)*
+
+[রেভিনিউ লিক ও কিস্টোনের অফার]
+"আমরা শহরের কিছু নামকরা আইইএলটিএস সেন্টারের সাথে পার্টনারশিপে কাজ করছি। সাধারণত আপনারা দীর্ঘ কয়েক মাস কষ্ট করে স্টুডেন্টদের ৬.৫ বা ৭.০ স্কোর এনে দেন। কিন্তু রেজাল্ট পাওয়ার পরেই স্টুডেন্টরা অন্য এজেন্সির কাছে চলে যায়, ফলে সেন্টারের কোনো লাভ থাকে না।
+
+কিস্টোনে আমরা ইউনিভার্সিটি অ্যাপ্লিকেশন করার সাথে সাথে সেন্টারকে ১,০০০ টাকা এবং ভিসা হওয়ার পর আরও ৯,০০০ টাকা—মোট ১০,০০০ টাকা ক্যাশ রেভিনিউ শেয়ার প্রদান করি। আপনার ট্রেইনারদের কোনো বাড়তি ফাইল প্রসেসিং করতে হয় না।"
+
+[মিটিং বুকিং]
+"আগামী বৃহস্পতিবার আপনার সেন্টারে কি ১০ মিনিটের জন্য বসা যায়, অথবা একটা শর্ট কলে কি আপনার ব্যাচের জন্য বিষয়টি ক্লিয়ার করে দিতে পারি স্যার?"`
+      },
+      gatekeeper: {
+        title: "Front-Desk / Gatekeeper Bypass Script",
+        tip: "💡 Sound like a peer: Speak with calm authority. Front-desk executives will transfer you if they think you are an expected corporate caller.",
+        text: () => `[Step 1: Direct Transfer Request]
+"Good morning. Please connect me with [Director Name], or the branch manager who oversees university partner tie-ups."
+
+[Step 2: If asked 'What is this regarding?']
+"This is Munim from Keystone Overseas. It is regarding the student revenue share agreement for your upcoming IELTS batch graduates. Is [Director Name] at their desk right now?"
+
+[Step 3: If told 'Send an email to info@']
+"I understand, and I know your info inbox receives hundreds of course inquiries every day. I do not want our commercial proposal buried under student queries.
+
+What is the direct WhatsApp number of the executive who handles institutional collaborations? I will send the 1-page breakdown directly to them. Fair enough?"`
+      }
+    };
 
     // Standard Proposal Message Generator
     function generateProposalMessage(centerName) {
@@ -737,7 +1014,7 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
     async function loadData() {
       try {
         const res = await fetch('./data.json');
-        if (!res.ok) throw new Error('data.json not found, trying all_bangladesh_centers.json');
+        if (!res.ok) throw new Error('data.json not found');
         crmData = await res.json();
         renderAll();
       } catch (err) {
@@ -761,7 +1038,6 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
       reader.onload = function(evt) {
         try {
           crmData = JSON.parse(evt.target.result);
-          document.getElementById('activeSourceLabel').innerText = 'Loaded: ' + file.name;
           renderAll();
         } catch (err) {
           alert('Invalid JSON file format.');
@@ -777,7 +1053,6 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
     }
 
     function renderAll() {
-      // 1. KPI Counts
       const todayRecords = crmData.filter(isToday);
       const eagerRecords = crmData.filter(r => r.status === 'Eager');
       const followUpRecords = crmData.filter(r => r.status === 'FollowUp');
@@ -789,7 +1064,7 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
       document.getElementById('statColdCount').innerText = coldRecords.length;
       document.getElementById('statTotalDb').innerText = crmData.length;
 
-      // 2. Render Eager Priority Cards
+      // Render Eager Priority Cards
       const eagerGrid = document.getElementById('eagerCardsGrid');
       eagerGrid.innerHTML = '';
       eagerRecords.forEach(c => {
@@ -797,6 +1072,7 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
         const latestNote = (c.notes && c.notes.length > 0) ? c.notes[c.notes.length - 1].text : 'Interested in collaboration';
         const msg = encodeURIComponent(generateProposalMessage(c.name));
         const waUrl = `https://wa.me/${cleanPhone}?text=${msg}`;
+        const tcUrl = `https://www.truecaller.com/search/bd/${cleanPhone}`;
 
         const card = document.createElement('div');
         card.className = 'eager-card';
@@ -807,7 +1083,8 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
               <span class="tag-district">${c.district}</span>
             </div>
             <div class="eager-phone" style="margin-top:8px;">
-              📞 ${c.phone || 'No phone'}
+              <span>📞 ${c.phone || 'No phone'}</span>
+              ${cleanPhone ? `<a href="${tcUrl}" target="_blank" class="btn-tc-lookup" title="Truecaller-এ নাম দেখুন">👤 Truecaller</a>` : ''}
             </div>
             <div class="eager-note-box" style="margin-top:10px;">
               💬 <strong>What They Said:</strong><br>${latestNote}
@@ -815,17 +1092,19 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
           </div>
           <div class="eager-actions">
             <button class="btn btn-outline" style="flex:1;" onclick="openProposalModal('${c.name.replace(/'/g, "\\'")}', '${cleanPhone}')">
-              📄 View Proposal
+              📄 Proposal
             </button>
-            <a href="${waUrl}" target="_blank" class="btn btn-whatsapp">
-              💬 Send on WhatsApp
+            <button class="btn btn-scripts" style="flex:1;" onclick="openScriptsModal('proposal', '${c.name.replace(/'/g, "\\'")}')">
+              📞 Script
+            </button>
+            <a href="${waUrl}" target="_blank" class="btn btn-whatsapp" style="flex:1;">
+              💬 WhatsApp
             </a>
           </div>
         `;
         eagerGrid.appendChild(card);
       });
 
-      // 3. Render Table
       renderTable();
     }
 
@@ -863,14 +1142,12 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
       filtered.forEach(r => {
         const tr = document.createElement('tr');
         
-        // Status Badge Class
         let badgeClass = 'badge-new';
         if (r.status === 'Eager') badgeClass = 'badge-eager';
         else if (r.status === 'FollowUp') badgeClass = 'badge-followup';
         else if (r.status === 'Cold') badgeClass = 'badge-cold';
         else if (r.status === 'Partnered') badgeClass = 'badge-partnered';
 
-        // Format notes
         let notesHtml = '<span style="color:var(--text-dim);">No notes recorded</span>';
         if (r.notes && r.notes.length > 0) {
           notesHtml = r.notes.map(n => {
@@ -882,6 +1159,23 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
         const cleanPhone = (r.phone || '').replace(/[^0-9]/g, '');
         const msg = encodeURIComponent(generateProposalMessage(r.name));
         const waUrl = `https://wa.me/${cleanPhone}?text=${msg}`;
+        const tcUrl = `https://www.truecaller.com/search/bd/${cleanPhone}`;
+        const fbSearchUrl = `https://www.facebook.com/search/pages/?q=${encodeURIComponent(r.name + ' ' + r.district)}`;
+
+        const isFb = (r.url || '').includes('facebook.com');
+        const isMaps = (r.url || '').includes('google.com/maps');
+
+        let verificationBadge = '';
+        if (isFb) {
+          verificationBadge = `<a href="${r.url}" target="_blank" class="badge-fb">🔵 FB Verified</a>`;
+        } else if (isMaps) {
+          verificationBadge = `
+            <a href="${r.url}" target="_blank" class="badge-maps">📍 Maps</a>
+            <a href="${fbSearchUrl}" target="_blank" class="btn-fb-search" title="Auto-find official Facebook Page">🔍 Cross-Check FB</a>
+          `;
+        } else if (r.url) {
+          verificationBadge = `<a href="${r.url}" target="_blank" class="badge-fb">🔗 Website</a>`;
+        }
 
         tr.innerHTML = `
           <td>
@@ -890,21 +1184,31 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
           </td>
           <td>
             <div style="font-weight:700; color:#f8fafc; font-size:13.5px;">${r.name}</div>
-            <div style="font-size:12px; color:var(--text-dim); margin-top:2px;">📍 ${r.district} | ID: ${r.id}</div>
+            <div style="font-size:12px; color:var(--text-dim); margin:3px 0 5px;">📍 ${r.district} | ID: ${r.id}</div>
+            <div>${verificationBadge}</div>
           </td>
           <td>
-            <div style="font-weight:600; color:#60a5fa;">${r.phone || '—'}</div>
-            ${r.url ? `<a href="${r.url}" target="_blank" style="font-size:11px; color:var(--text-dim); text-decoration:none;">🔗 Facebook Page</a>` : ''}
+            <div style="font-weight:600; color:#60a5fa; margin-bottom:4px;">${r.phone || '—'}</div>
+            ${cleanPhone ? `
+              <a href="${tcUrl}" target="_blank" class="btn-tc-lookup" title="Truecaller-এ নাম যাচাই করুন">
+                👤 Truecaller
+              </a>
+            ` : ''}
           </td>
           <td>
             ${notesHtml}
           </td>
           <td style="text-align:right;">
-            ${cleanPhone ? `
-              <a href="${waUrl}" target="_blank" class="btn btn-whatsapp" style="font-size:11px; padding:6px 10px;">
-                💬 WhatsApp
-              </a>
-            ` : '—'}
+            <div style="display:flex; flex-direction:column; gap:4px; align-items:flex-end;">
+              ${cleanPhone ? `
+                <a href="${waUrl}" target="_blank" class="btn btn-whatsapp" style="font-size:11px; padding:5px 9px;">
+                  💬 WhatsApp
+                </a>
+                <button class="btn btn-scripts" style="font-size:11px; padding:5px 9px;" onclick="openScriptsModal('proposal', '${r.name.replace(/'/g, "\\'")}')">
+                  📞 Script
+                </button>
+              ` : '—'}
+            </div>
           </td>
         `;
         tbody.appendChild(tr);
@@ -921,13 +1225,12 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
       });
     });
 
-    // Search input
     document.getElementById('tableSearch').addEventListener('input', function(e) {
       searchQuery = e.target.value;
       renderTable();
     });
 
-    // Modal logic
+    // Modals
     function openProposalModal(name, phone) {
       document.getElementById('modalCenterName').innerText = 'Proposal for: ' + name;
       const text = generateProposalMessage(name);
@@ -936,8 +1239,49 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
       document.getElementById('proposalModal').classList.add('open');
     }
 
-    function closeModal() {
-      document.getElementById('proposalModal').classList.remove('open');
+    function openScriptsModal(tabKey = 'proposal', center = '[Center Name]') {
+      targetCenterName = center;
+      document.getElementById('scriptsModal').classList.add('open');
+      switchScriptTab(tabKey);
+    }
+
+    function switchScriptTab(key) {
+      activeScriptKey = key;
+      document.querySelectorAll('.script-tab-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = Array.from(document.querySelectorAll('.script-tab-btn')).find(b => 
+        b.getAttribute('onclick').includes(key)
+      );
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const s = SCRIPTS[key];
+      if (s) {
+        document.getElementById('scriptsModalTitle').innerText = '📖 ' + s.title;
+        document.getElementById('scriptTip').innerHTML = s.tip;
+        document.getElementById('scriptBody').innerText = s.text(targetCenterName);
+      }
+    }
+
+    function copyActiveScript() {
+      const text = document.getElementById('scriptBody').innerText;
+      navigator.clipboard.writeText(text);
+      alert('Script copied to clipboard!');
+    }
+
+    function openTruecallerModal() {
+      const saved = localStorage.getItem('KEYSTONE_TRUECALLER_TOKEN') || '';
+      document.getElementById('tcApiKeyInput').value = saved;
+      document.getElementById('truecallerModal').classList.add('open');
+    }
+
+    function saveTruecallerKey() {
+      const val = document.getElementById('tcApiKeyInput').value.trim();
+      localStorage.setItem('KEYSTONE_TRUECALLER_TOKEN', val);
+      alert('Truecaller API Token saved successfully on this browser!');
+      closeModal('truecallerModal');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
     }
 
     function copyModalText() {
@@ -946,7 +1290,6 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
       alert('Proposal message copied to clipboard!');
     }
 
-    // Init
     loadData();
   </script>
 </body>

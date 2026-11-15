@@ -617,6 +617,30 @@ body {
   color: var(--text-main); 
 }
 
+.btn-truecaller {
+  background: rgba(2, 132, 199, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.btn-truecaller:hover {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.4);
+}
+
+.btn-fb {
+  background: rgba(24, 119, 242, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+}
+.btn-fb:hover {
+  background: #1877F2;
+  color: #ffffff;
+  border-color: #1877F2;
+  box-shadow: 0 0 10px rgba(24, 119, 242, 0.4);
+}
+
 .no-phone-tag {
   color: var(--text-dark);
   font-size: 0.75rem;
@@ -1277,8 +1301,8 @@ body {
 
 .focus-action-buttons {
   display: grid;
-  grid-template-columns: 1.2fr 1.2fr 0.8fr;
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.65rem;
 }
 
 .btn-call-large {
@@ -1344,6 +1368,52 @@ body {
 .btn-source-large:hover {
   background: rgba(252, 255, 255, 0.15);
   border-color: var(--primary);
+}
+
+.btn-truecaller-large {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #FCFFFF;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-truecaller-large:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+  filter: brightness(1.1);
+}
+
+.btn-fb-search-large {
+  background: rgba(24, 119, 242, 0.18);
+  border: 1px solid rgba(37, 99, 235, 0.5);
+  color: #bfdbfe;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.btn-fb-search-large:hover {
+  background: #1877F2;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(24, 119, 242, 0.4);
 }
 
 /* Decision Bar in Focus Card */
