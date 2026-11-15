@@ -663,7 +663,7 @@
 
         <!-- Truecaller Setup Button -->
         <button class="btn btn-truecaller" onclick="openTruecallerModal()">
-          👤 Truecaller API Key
+          👤 TruecallerJS (Open Source)
         </button>
 
         <a href="./index.html" class="btn btn-outline" style="border-color:#334155;" title="টেলিকলার মোডে যান">
@@ -867,36 +867,63 @@
     </div>
   </div>
 
-  <!-- Truecaller API Configuration Modal -->
+  <!-- TruecallerJS Configuration & Interactive Lookup Modal -->
   <div class="modal-overlay" id="truecallerModal">
-    <div class="modal-content" style="max-width: 580px;">
+    <div class="modal-content" style="max-width: 620px;">
       <div class="modal-header">
-        <h3>👤 Truecaller Caller-ID Lookup Setup</h3>
+        <div>
+          <h3 style="display:flex; align-items:center; gap:8px;">
+            <span>👤</span>
+            <span>TruecallerJS Open-Source Setup</span>
+          </h3>
+          <span style="font-size:12px; color:var(--text-dim);">Powered by <a href="https://github.com/sumithemmadi/truecallerjs" target="_blank" style="color:#38bdf8; text-decoration:underline;">sumithemmadi/truecallerjs</a> (MIT)</span>
+        </div>
         <button class="close-btn" onclick="closeModal('truecallerModal')">&times;</button>
       </div>
       
-      <p style="font-size:13px; color:var(--text-muted); line-height:1.5; margin-bottom:14px;">
-        Truecaller identifies the real owner/director name behind unknown coaching center phone numbers before you dial.
+      <p style="font-size:12.5px; color:var(--text-muted); line-height:1.5; margin:12px 0 16px;">
+        Zero official paid API contracts required. TruecallerJS is a community open-source engine that queries Truecaller directly using a verified installation session.
       </p>
 
-      <div style="background:#0f172a; border:1px solid var(--card-border); border-radius:8px; padding:14px; margin-bottom:16px;">
-        <h4 style="font-size:13px; color:#38bdf8; margin-bottom:6px;">Method 1: Instant 1-Click Search (Zero Setup)</h4>
-        <p style="font-size:12px; color:#cbd5e1; line-height:1.4;">
-          Click the <strong>"👤 Truecaller"</strong> button next to any phone number in the table below to immediately open Truecaller web search and view the verified caller name.
-        </p>
+      <!-- Terminal Setup Instructions -->
+      <div style="background:#020617; border:1px solid #1e293b; border-radius:8px; padding:12px 14px; margin-bottom:14px;">
+        <div style="font-size:12px; font-weight:700; color:#38bdf8; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+          <span>💻</span> <span>1-Time Terminal Setup (Node.js)</span>
+        </div>
+        <div style="font-size:11.5px; color:#94a3b8; line-height:1.5;">
+          1. Authenticate with your phone number and OTP:<br>
+          <code style="display:inline-block; background:#0f172a; padding:3px 8px; border-radius:4px; color:#22d3ee; margin:3px 0;">npx truecallerjs login</code><br>
+          2. View your generated Installation ID:<br>
+          <code style="display:inline-block; background:#0f172a; padding:3px 8px; border-radius:4px; color:#22d3ee; margin:3px 0;">npx truecallerjs -i</code>
+        </div>
       </div>
 
-      <div style="background:#0f172a; border:1px solid var(--card-border); border-radius:8px; padding:14px; margin-bottom:16px;">
-        <h4 style="font-size:13px; color:#34d399; margin-bottom:6px;">Method 2: Truecaller API Token / Installation ID (Optional)</h4>
-        <p style="font-size:12px; color:#cbd5e1; line-height:1.4; margin-bottom:8px;">
-          If you have a Truecaller Installation ID (generated via <code>truecallerpy login</code>) or RapidAPI key, paste it here to enable automated in-page name resolution:
-        </p>
-        <input type="text" id="tcApiKeyInput" placeholder="Enter Truecaller Installation ID / API Token..." style="width:100%; padding:9px 12px; background:#1e293b; border:1px solid #334155; border-radius:6px; color:#fff; font-size:12.5px; outline:none;">
+      <!-- Installation ID Input -->
+      <div style="background:#0f172a; border:1px solid var(--card-border); border-radius:8px; padding:14px; margin-bottom:14px;">
+        <label style="display:block; font-size:12px; font-weight:700; color:#34d399; margin-bottom:6px;">
+          🔑 TruecallerJS Installation ID:
+        </label>
+        <div style="display:flex; gap:8px;">
+          <input type="text" id="tcApiKeyInput" placeholder="Paste installationId from 'npx truecallerjs -i'..." style="flex:1; padding:9px 12px; background:#1e293b; border:1px solid #334155; border-radius:6px; color:#fff; font-size:12px; outline:none;">
+          <button class="btn btn-primary" style="font-size:12px; padding:8px 14px; white-space:nowrap;" onclick="saveTruecallerKey()">Save Key</button>
+        </div>
       </div>
 
-      <div style="display:flex; justify-content:flex-end; gap:8px;">
-        <button class="btn btn-outline" onclick="closeModal('truecallerModal')">Cancel</button>
-        <button class="btn btn-primary" onclick="saveTruecallerKey()">Save Key on Device</button>
+      <!-- In-Page Live Test Resolver -->
+      <div style="background:#0f172a; border:1px solid var(--card-border); border-radius:8px; padding:14px; margin-bottom:16px;">
+        <label style="display:block; font-size:12px; font-weight:700; color:#f8fafc; margin-bottom:6px;">
+          ⚡ Test Live Caller-ID Resolution:
+        </label>
+        <div style="display:flex; gap:8px; margin-bottom:8px;">
+          <input type="text" id="tcTestPhoneInput" placeholder="+8801711004605" style="flex:1; padding:9px 12px; background:#1e293b; border:1px solid #334155; border-radius:6px; color:#fff; font-size:12px; outline:none;">
+          <button class="btn btn-truecaller" style="font-size:12px; padding:8px 14px; white-space:nowrap;" onclick="testTruecallerLookup()">🔍 Resolve Name</button>
+        </div>
+        <div id="tcTestResult" style="display:none; font-size:12px; padding:10px; background:#020617; border:1px solid #1e293b; border-radius:6px;"></div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <span style="font-size:11.5px; color:var(--text-dim);">CLI Script: <code>node crm/scripts/truecaller_lookup.js</code></span>
+        <button class="btn btn-outline" onclick="closeModal('truecallerModal')">Close</button>
       </div>
     </div>
   </div>
@@ -1267,17 +1294,59 @@ Are you open to a brief 10-minute chat this Thursday around 11:30 AM to connect 
       alert('Script copied to clipboard!');
     }
 
-    function openTruecallerModal() {
-      const saved = localStorage.getItem('KEYSTONE_TRUECALLER_TOKEN') || '';
+    function openTruecallerModal(prefillPhone = '') {
+      const saved = localStorage.getItem('KEYSTONE_TRUECALLERJS_ID') || '';
       document.getElementById('tcApiKeyInput').value = saved;
+      if (prefillPhone) {
+        document.getElementById('tcTestPhoneInput').value = prefillPhone;
+      }
       document.getElementById('truecallerModal').classList.add('open');
     }
 
     function saveTruecallerKey() {
       const val = document.getElementById('tcApiKeyInput').value.trim();
-      localStorage.setItem('KEYSTONE_TRUECALLER_TOKEN', val);
-      alert('Truecaller API Token saved successfully on this browser!');
-      closeModal('truecallerModal');
+      localStorage.setItem('KEYSTONE_TRUECALLERJS_ID', val);
+      alert('TruecallerJS Installation ID saved successfully!');
+    }
+
+    async function testTruecallerLookup() {
+      const phone = document.getElementById('tcTestPhoneInput').value.trim();
+      const statusBox = document.getElementById('tcTestResult');
+      if (!phone) {
+        alert('Please enter a phone number to test.');
+        return;
+      }
+      const token = document.getElementById('tcApiKeyInput').value.trim() || localStorage.getItem('KEYSTONE_TRUECALLERJS_ID') || '';
+      
+      statusBox.style.display = 'block';
+      statusBox.innerHTML = '<span style="color:#38bdf8;">⏳ Resolving caller name via TruecallerJS...</span>';
+
+      try {
+        const res = await fetch(`/api/truecaller/search?phone=${encodeURIComponent(phone)}&installationId=${encodeURIComponent(token)}`);
+        const data = await res.json();
+        if (data.success && data.name) {
+          statusBox.innerHTML = `
+            <div style="color:#34d399; font-weight:700;">✅ Verified Director Name Found!</div>
+            <div style="font-size:14px; color:#fff; margin-top:4px;"><strong>Name:</strong> ${data.name}</div>
+            ${data.altName ? `<div style="font-size:12px; color:#94a3b8;"><strong>Alt Name:</strong> ${data.altName}</div>` : ''}
+            ${data.addresses && data.addresses.length ? `<div style="font-size:12px; color:#94a3b8;"><strong>Location:</strong> ${data.addresses.map(a => a.city || a.countryCode).join(', ')}</div>` : ''}
+          `;
+        } else {
+          statusBox.innerHTML = `
+            <div style="color:#ef4444;">⚠️ TruecallerJS response: ${data.error || 'No registered name found.'}</div>
+            <div style="margin-top:6px;"><a href="https://www.truecaller.com/search/bd/${phone.replace(/[^0-9]/g, '')}" target="_blank" style="color:#38bdf8; text-decoration:underline;">Click here to open Truecaller Web Search directly</a></div>
+          `;
+        }
+      } catch (e) {
+        statusBox.innerHTML = `
+          <div style="color:#f59e0b;">💡 Static Mode (GitHub Pages)</div>
+          <div style="font-size:12px; color:#cbd5e1; margin-top:4px;">
+            To resolve directly in terminal with TruecallerJS, run:<br>
+            <code style="display:block; background:#000; padding:6px; border-radius:4px; margin:4px 0; color:#38bdf8;">npx truecallerjs -s ${phone} --json</code>
+            Or <a href="https://www.truecaller.com/search/bd/${phone.replace(/[^0-9]/g, '')}" target="_blank" style="color:#38bdf8; text-decoration:underline; font-weight:700;">Open Direct Truecaller Web Search (Instant)</a>
+          </div>
+        `;
+      }
     }
 
     function closeModal(id) {
