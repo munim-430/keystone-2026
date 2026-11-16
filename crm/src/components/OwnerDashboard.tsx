@@ -146,10 +146,28 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
   }, [centers]);
 
   // --- Filtered Center Directory ---
+  const handleKpiClick = (status: 'ALL' | 'CALLED' | 'EAGER' | 'FOLLOWUP' | 'COLD') => {
+    setSelectedStatus(status);
+    setSelectedDistrict('ALL');
+    setSearchQuery('');
+    setCurrentPage(1);
+    setActiveTab('directory');
+  };
+
   const filteredCenters = useMemo(() => {
     return centers.filter((c) => {
       if (selectedDistrict !== 'ALL' && c.district !== selectedDistrict) return false;
-      if (selectedStatus !== 'ALL' && c.status.toLowerCase() !== selectedStatus.toLowerCase()) return false;
+      
+      if (selectedStatus === 'CALLED') {
+        const hasNotes = c.notes && c.notes.length > 0;
+        if (!hasNotes) return false;
+      } else if (selectedStatus !== 'ALL') {
+        if (selectedStatus === 'COLD') {
+          if (c.status.toLowerCase() !== 'cold' && c.status.toLowerCase() !== 'rejected') return false;
+        } else if (c.status.toLowerCase() !== selectedStatus.toLowerCase()) {
+          return false;
+        }
+      }
 
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
@@ -308,7 +326,13 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
       <main className="owner-main-content">
         {/* Nationwide Real-Time KPI Cards Bar */}
         <section className="nationwide-kpi-grid">
-          <div className="kpi-card">
+          <div
+            className={`kpi-card kpi-card-clickable ${activeTab === 'directory' && selectedStatus === 'ALL' ? 'kpi-card-active' : ''}`}
+            onClick={() => handleKpiClick('ALL')}
+            role="button"
+            tabIndex={0}
+            title="সকল ৮৫৯ সেন্টার তালিকা দেখুন"
+          >
             <div className="kpi-icon-box text-cerulean">🏢</div>
             <div className="kpi-data">
               <span className="kpi-value">{kpis.total}</span>
@@ -316,7 +340,13 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
             </div>
           </div>
 
-          <div className="kpi-card">
+          <div
+            className={`kpi-card kpi-card-clickable ${activeTab === 'directory' && selectedStatus === 'CALLED' ? 'kpi-card-active' : ''}`}
+            onClick={() => handleKpiClick('CALLED')}
+            role="button"
+            tabIndex={0}
+            title="যেসব সেন্টারে কল সম্পন্ন হয়েছে তাদের তালিকা দেখুন"
+          >
             <div className="kpi-icon-box text-sky">
               <PhoneCall size={24} />
             </div>
@@ -326,7 +356,13 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
             </div>
           </div>
 
-          <div className="kpi-card kpi-card-eager">
+          <div
+            className={`kpi-card kpi-card-eager kpi-card-clickable ${activeTab === 'directory' && selectedStatus === 'EAGER' ? 'kpi-card-active' : ''}`}
+            onClick={() => handleKpiClick('EAGER')}
+            role="button"
+            tabIndex={0}
+            title="🔥 আগ্রহী সেন্টারগুলোর তালিকা দেখুন"
+          >
             <div className="kpi-icon-box text-magenta">
               <Flame size={24} />
             </div>
@@ -336,7 +372,13 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
             </div>
           </div>
 
-          <div className="kpi-card">
+          <div
+            className={`kpi-card kpi-card-clickable ${activeTab === 'directory' && selectedStatus === 'FOLLOWUP' ? 'kpi-card-active' : ''}`}
+            onClick={() => handleKpiClick('FOLLOWUP')}
+            role="button"
+            tabIndex={0}
+            title="⏳ ফলোআপ / লং লিড সেন্টারের তালিকা দেখুন"
+          >
             <div className="kpi-icon-box text-amber">
               <Clock size={24} />
             </div>
@@ -346,7 +388,13 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
             </div>
           </div>
 
-          <div className="kpi-card">
+          <div
+            className={`kpi-card kpi-card-clickable ${activeTab === 'directory' && selectedStatus === 'COLD' ? 'kpi-card-active' : ''}`}
+            onClick={() => handleKpiClick('COLD')}
+            role="button"
+            tabIndex={0}
+            title="❌ আগ্রহহীন বা ভুল নম্বরের তালিকা দেখুন"
+          >
             <div className="kpi-icon-box text-rose">
               <XCircle size={24} />
             </div>
@@ -651,6 +699,7 @@ export const OwnerDashboard: React.FC<OwnerDashboardProps> = ({
                   className="filter-select"
                 >
                   <option value="ALL">সকল স্ট্যাটাস</option>
+                  <option value="CALLED">📞 কল সম্পন্ন ({kpis.totalCalled})</option>
                   <option value="EAGER">🔥 আগ্রহী (Eager)</option>
                   <option value="FOLLOWUP">⏳ লং লিড (Follow Up)</option>
                   <option value="COLD">❄️ কোল্ড / আগ্রহ নেই</option>

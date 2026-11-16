@@ -1138,6 +1138,23 @@ body {
   border-color: var(--border-medium);
   transform: translateY(-1px);
 }
+.kpi-card-clickable {
+  cursor: pointer;
+  user-select: none;
+}
+.kpi-card-clickable:hover {
+  border-color: var(--cyan-primary);
+  box-shadow: 0 4px 16px rgba(5, 147, 198, 0.18);
+  transform: translateY(-2px);
+}
+.kpi-card-clickable:active {
+  transform: translateY(0);
+}
+.kpi-card-active {
+  border-color: var(--cyan-primary) !important;
+  background: radial-gradient(circle at top right, rgba(5, 147, 198, 0.16), var(--bg-card)) !important;
+  box-shadow: 0 0 0 2px rgba(5, 147, 198, 0.35) !important;
+}
 .kpi-card-eager {
   border-color: var(--magenta-border);
   background: radial-gradient(circle at top right, rgba(216, 57, 149, 0.12), var(--bg-card));

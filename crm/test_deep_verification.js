@@ -280,6 +280,26 @@ async function run() {
     assert(sql.includes('00000000-0000-0000-0000-000000003001'), 'SQL seeds caller 1 with matching UUID');
   });
 
+  // TEST 8: Interactive KPI Cards & "CALLED" Status Filter (TDD)
+  it('Interactive KPI Cards: "CALLED" filter and interactive KPI card click routing', () => {
+    // 1. Verify OwnerDashboard source code includes interactive click handlers on the KPI cards
+    const ownerCode = fs.readFileSync(path.join(crmDir, 'src/components/OwnerDashboard.tsx'), 'utf8');
+
+    assert(ownerCode.includes("handleKpiClick('CALLED')"), 'Must have click handler for CALLED KPI card');
+    assert(ownerCode.includes("handleKpiClick('EAGER')"), 'Must have click handler for EAGER KPI card');
+    assert(ownerCode.includes("handleKpiClick('FOLLOWUP')"), 'Must have click handler for FOLLOWUP KPI card');
+    assert(ownerCode.includes("handleKpiClick('COLD')"), 'Must have click handler for COLD KPI card');
+    assert(ownerCode.includes("handleKpiClick('ALL')"), 'Must have click handler for ALL centers KPI card');
+
+    // 2. Verify filter logic supports 'CALLED'
+    assert(ownerCode.includes("selectedStatus === 'CALLED'"), 'Directory filter must explicitly support CALLED status');
+    assert(ownerCode.includes('<option value="CALLED">'), 'Directory status dropdown must include CALLED option');
+
+    // 3. Verify CSS affords interactivity
+    const cssCode = fs.readFileSync(path.join(crmDir, 'src/index.css'), 'utf8');
+    assert(cssCode.includes('.kpi-card-clickable'), 'CSS must define .kpi-card-clickable with hover/active styling');
+  });
+
   console.log(`\n======================================================`);
   console.log(`  Deep Regression Tests Passed: ${passCount}`);
   console.log(`  Deep Regression Tests Failed: ${failCount}`);
